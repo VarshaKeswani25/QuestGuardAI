@@ -5,28 +5,35 @@ class CoordinatorAgent:
 
     def start_quest(self, state):
 
-        print("\nQuest Session Started")
-
         mission = generate_mission()
 
-        state["mission"] = mission
+        state["mission"] = mission["title"]
 
-        print(f"Mission Generated: {mission}")
+        state["reward_points"] = mission["xp"]
+
+        state["mission_status"] = "assigned"
 
         return state
 
-    def request_parent_approval(self, state):
+    def approve_mission(self, state, approval=True):
 
-        print("\nWaiting for Parent Approval...")
+        if approval:
 
-        approval = input("Approve mission? (yes/no): ")
-
-        if approval.lower() == "yes":
             state["parent_approved"] = True
-            print("Mission Approved")
+
+            state["mission_status"] = "approved"
+
         else:
+
             state["parent_approved"] = False
-            print("Mission Rejected")
+
+            state["mission_status"] = "rejected"
+
+        return state
+
+    def verify_mission(self, state):
+
+        state["verification_status"] = "verified"
 
         return state
 
@@ -34,15 +41,18 @@ class CoordinatorAgent:
 
         if state["parent_approved"]:
 
-            print("\nMission Completed Successfully")
-
             state["mission_completed"] = True
 
-            state["reward_points"] += 50
+            state["mission_status"] = "completed"
 
-            print(f"Reward Earned: {state['reward_points']} XP")
+            state["badges"].append("Community Hero")
 
-        else:
-            print("\nMission cannot start without approval")
+        return state
+    
+    def retry_mission(self, state):
+
+        state["mission_status"] = "retrying"
+
+        state["verification_status"] = "retry_required"
 
         return state
