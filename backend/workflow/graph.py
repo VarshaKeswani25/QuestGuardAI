@@ -7,7 +7,7 @@ def run_workflow():
         "child_name": "Rakhi",
         "child_location": "Karachi",
         "mission": "",
-        "parent_approved": False,
+        "parent_approved": True,
         "mission_completed": False,
         "reward_points": 0
     }
@@ -16,9 +16,6 @@ def run_workflow():
 
     state = coordinator.start_quest(state)
 
-    state = coordinator.request_parent_approval(state)
-
     state = coordinator.complete_mission(state)
 
-    print("\nFinal State:")
-    print(state)
+    return state

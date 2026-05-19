@@ -1,5 +1,11 @@
-from workflow.graph import run_workflow
+from fastapi import FastAPI
+from api.routes import router
+
+app = FastAPI()
+
+app.include_router(router)
 
 
-if __name__ == "__main__":
-    run_workflow()
+@app.get("/")
+def home():
+    return {"message": "QuestGuard AI Backend Running"}
