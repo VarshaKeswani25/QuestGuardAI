@@ -1,341 +1,524 @@
 // screens/HomeScreen.js
-// AI-POWERED: Missions are generated dynamically by Claude (Anthropic API)
-// Agent: Mission Generator — creates age-appropriate eco missions for Karachi children
+// ✅ BUG FIXED VERSION
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, {
+  useState,
+  useEffect,
+  useCallback,
+  useRef,
+  useMemo
+} from 'react';
+
+import { useFocusEffect } from '@react-navigation/native';
 import {
-  View, Text, StyleSheet, TouchableOpacity, ScrollView,
-  StatusBar, ActivityIndicator, RefreshControl,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+  StatusBar,
+  ActivityIndicator,
+  RefreshControl,
 } from 'react-native';
+
 import { generateMissions } from '../services/aiservice';
+import { getUserProfile, getLeaderboard } from '../services/userService';
+import { getAuth } from "firebase/auth";
 
-const CATEGORIES = ['All', 'Carbon Garden', 'Clean Karachi', 'Water Mission', 'Heritage Quest', 'Air Watch'];
+const CATEGORIES = [
+  'All',
+  'Carbon Garden',
+  'Clean Karachi',
+  'Water Mission',
+  'Heritage Quest',
+  'Air Watch'
+];
 
-const DIFF_COLORS = { Easy: '#4ade80', Medium: '#fbbf24', Hard: '#f87171' };
-const TAG_COLORS  = { Daily: '#fcd34d', Weekly: '#93c5fd', Special: '#c4b5fd' };
+export default function HomeScreen({ navigation, route }) {
 
-export default function HomeScreen({ navigation }) {
+  const auth = getAuth();
+  const userId = auth.currentUser?.uid;
+
   const [missions, setMissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
   const [agentStatus, setAgentStatus] = useState('Initializing AI agent...');
+  const [leaderboard, setLeaderboard] = useState([]);
 
-  // ── AI Agent: generate missions on mount ──────────────────────
-  const fetchMissions = useCallback(async (isRefresh = false) => {
-    if (isRefresh) setRefreshing(true);
-    else setLoading(true);
-    setError(null);
+  const [userProfile, setUserProfile] = useState({
+    xp: 0,
+    level: 1,
+    badge: "Beginner 🌱",
+    streak: 0,
+    completedMissions: 0
+  });
+
+  const [showLevelUp, setShowLevelUp] = useState(false);
+
+  const isMounted = useRef(true);
+  const prevLevelRef = useRef(1);
+
+  useEffect(() => {
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
+  // ─────────────────────────────
+  // PROFILE
+  // ─────────────────────────────
+  const loadUserProfile = useCallback(async () => {
+    if (!userId) return;
 
     try {
-      setAgentStatus('Agent reasoning about Karachi eco-challenges...');
-      await new Promise(r => setTimeout(r, 600)); // visual pause for agentic feel
+      const data = await getUserProfile(userId);
+      if (!data || !isMounted.current) return;
 
-      setAgentStatus('Generating personalized missions...');
-      const data = await generateMissions(12, []);
+      const newLevel = data.level || 1;
 
-      setMissions(data);
-      setAgentStatus('Missions ready!');
+      setUserProfile({
+        xp: data.xp || 0,
+        level: newLevel,
+        badge: data.badge || "Beginner 🌱",
+        streak: data.streak || 0,
+        completedMissions: data.completedMissions || 0
+      });
+
+      if (newLevel > prevLevelRef.current) {
+        setShowLevelUp(true);
+        setTimeout(() => {
+          if (isMounted.current) setShowLevelUp(false);
+        }, 2000);
+      }
+
+      prevLevelRef.current = newLevel;
+
     } catch (e) {
-      setError(e.message);
-      setAgentStatus('Agent failed to connect');
-    } finally {
-      setLoading(false);
-      setRefreshing(false);
+      console.log("Profile Error:", e.message);
+    }
+  }, [userId]);
+
+  // ─────────────────────────────
+  // ISSUE 6 FIX: remove redundant JS sort
+  // Firestore already returns ordered by xp desc
+  // ─────────────────────────────
+  const loadLeaderboard = useCallback(async () => {
+    try {
+      const data = await getLeaderboard();
+      if (!isMounted.current) return;
+      setLeaderboard(data || []);
+    } catch (e) {
+      console.log("Leaderboard Error:", e.message);
     }
   }, []);
 
-  useEffect(() => { fetchMissions(); }, [fetchMissions]);
+  // ─────────────────────────────
+  // AI MISSIONS
+  // ─────────────────────────────
+  const fetchMissions = useCallback(async (isRefresh = false) => {
+    if (!userId) return;
 
-  const filtered = activeCategory === 'All'
-    ? missions
-    : missions.filter(m => m.category === activeCategory);
+    let timeoutId;
 
-  // ── Loading state ──────────────────────────────────────────────
-  if (loading) {
+    try {
+      setError(null);
+      isRefresh ? setRefreshing(true) : setLoading(true);
+
+      setAgentStatus('AI analyzing Karachi environment...');
+
+      const timeout = new Promise((_, reject) => {
+        timeoutId = setTimeout(() => reject(new Error("AI timeout")), 15000);
+      });
+
+      setAgentStatus('Generating missions...');
+
+      const aiCall = generateMissions(12, []);
+      const data = await Promise.race([aiCall, timeout]);
+
+      clearTimeout(timeoutId);
+
+      if (!Array.isArray(data)) throw new Error("Invalid AI response");
+
+      if (isMounted.current) {
+        setMissions(data);
+        setAgentStatus('Missions ready!');
+      }
+
+    } catch (e) {
+      console.log("Mission Error:", e.message);
+
+      if (isMounted.current) {
+        setMissions([
+          {
+            id: "1",
+            title: "Clean your surroundings",
+            emoji: "🧹",
+            category: "Clean Karachi",
+            difficulty: "Easy",
+            xp: 10,
+            tag: "Daily"
+          }
+        ]);
+        setAgentStatus('Offline missions loaded');
+        setError(e.message);
+      }
+
+    } finally {
+      clearTimeout(timeoutId);
+      if (isMounted.current) {
+        setLoading(false);
+        setRefreshing(false);
+      }
+    }
+  }, [userId]);
+
+  // ─────────────────────────────
+  // INIT
+  // ─────────────────────────────
+  useEffect(() => {
+    const init = async () => {
+      if (!userId) return;
+      await fetchMissions();
+      await loadUserProfile();
+      await loadLeaderboard();
+    };
+    init();
+  }, [userId]);
+
+  // ─────────────────────────────
+  // LIVE REFRESH
+  // ─────────────────────────────
+  useFocusEffect(
+    useCallback(() => {
+      if (!userId) return;
+
+      loadUserProfile();
+      loadLeaderboard();
+
+      if (route?.params?.xpUpdated) {
+        loadUserProfile();
+        loadLeaderboard();
+        navigation.setParams?.({ xpUpdated: false });
+      }
+
+      if (route?.params?.leaderboardRefresh) {
+        loadLeaderboard();
+      }
+
+    }, [userId, route?.params?.xpUpdated, route?.params?.leaderboardRefresh])
+  );
+
+  // ─────────────────────────────
+  // FILTER
+  // ─────────────────────────────
+  const filtered = useMemo(() => {
+    return activeCategory === 'All'
+      ? missions
+      : missions.filter(m => m.category === activeCategory);
+  }, [missions, activeCategory]);
+
+  const completedToday = userProfile?.completedMissions || 0;
+  const totalGoal = 4;
+
+  const progressWidth = `${Math.min(
+    totalGoal ? (completedToday / totalGoal) * 100 : 0,
+    100
+  )}%`;
+
+  // ─────────────────────────────
+  // LOADING UI
+  // ─────────────────────────────
+  if (loading && missions.length === 0) {
     return (
       <View style={styles.loadingContainer}>
         <StatusBar barStyle="light-content" backgroundColor="#052e16" />
-        <View style={styles.agentLoader}>
-          <Text style={styles.agentLoaderEmoji}>🤖</Text>
-          <ActivityIndicator size="large" color="#4ade80" style={{ marginVertical: 16 }} />
-          <Text style={styles.agentLoaderText}>{agentStatus}</Text>
-          <Text style={styles.agentLoaderSub}>Agentic AI is reasoning about Karachi's{'\n'}environmental challenges for you...</Text>
-        </View>
+        <ActivityIndicator size="large" color="#4ade80" />
+        <Text style={styles.agentLoaderText}>{agentStatus}</Text>
       </View>
     );
   }
 
-  // ── Error state ────────────────────────────────────────────────
-  if (error) {
+  if (error && missions.length === 0) {
     return (
       <View style={styles.loadingContainer}>
-        <StatusBar barStyle="light-content" backgroundColor="#052e16" />
-        <View style={styles.errorBox}>
-          <Text style={styles.errorEmoji}>⚠️</Text>
-          <Text style={styles.errorTitle}>AI Agent Offline</Text>
-          <Text style={styles.errorMsg}>{error}</Text>
-          <Text style={styles.errorHint}>Add your API key to .env:{'\n'}EXPO_PUBLIC_GEMINI_API_KEY=AIzaSy...</Text>
-          <TouchableOpacity style={styles.retryBtn} onPress={() => fetchMissions()}>
-            <Text style={styles.retryText}>🔄  Retry</Text>
-          </TouchableOpacity>
-        </View>
+        <Text style={styles.errorTitle}>AI Error</Text>
+        <TouchableOpacity onPress={() => fetchMissions()}>
+          <Text style={styles.retryText}>Retry</Text>
+        </TouchableOpacity>
       </View>
     );
   }
 
+  // ─────────────────────────────
+  // UI
+  // ─────────────────────────────
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#052e16" />
 
-      {/* Header */}
+      {/* LEVEL UP */}
+      {showLevelUp && (
+        <View style={styles.levelPopup}>
+          <Text style={styles.levelPopupText}>🏆 LEVEL UP!</Text>
+        </View>
+      )}
+
+      {/* HEADER */}
       <View style={styles.header}>
         <View>
           <Text style={styles.greeting}>Asalam-o-Alaikum! 👋</Text>
           <Text style={styles.heroName}>Young Guardian</Text>
+          <Text style={styles.badgeText}>{userProfile?.badge}</Text>
         </View>
+
         <View style={styles.xpBadge}>
-          <Text style={styles.xpText}>⚡ 320 XP</Text>
+          <Text style={styles.xpText}>
+            🔥 {userProfile?.streak || 0} Day Streak
+          </Text>
         </View>
       </View>
 
-      {/* Progress Banner */}
+      {/* PROGRESS */}
       <View style={styles.progressBanner}>
         <View style={styles.progressLeft}>
           <Text style={styles.progressTitle}>Today's Goal</Text>
-          <Text style={styles.progressSub}>2 of 4 missions done</Text>
+          <Text style={styles.progressSub}>
+            {completedToday} of {totalGoal} missions done
+          </Text>
+
           <View style={styles.progressBg}>
-            <View style={[styles.progressFill, { width: '50%' }]} />
+            <View style={[styles.progressFill, { width: progressWidth }]} />
           </View>
         </View>
+
         <View style={styles.progressRight}>
           <Text style={{ fontSize: 38 }}>🏆</Text>
-          <Text style={styles.levelText}>Level 4</Text>
+          <Text style={styles.levelText}>Level {userProfile?.level}</Text>
+          <Text style={styles.totalXP}>⚡ {userProfile?.xp} XP</Text>
         </View>
       </View>
 
-      {/* AI agent status chip */}
+      {/* AI CHIP */}
       <View style={styles.agentChip}>
-        <Text style={styles.agentChipText}>🤖 AI generated {missions.length} missions for Karachi</Text>
+        <Text style={styles.agentChipText}>
+          🤖 AI generated {missions.length} missions for Karachi
+        </Text>
       </View>
 
-      {/* Category filter */}
-      <ScrollView
-        horizontal showsHorizontalScrollIndicator={false}
-        style={styles.catScroll} contentContainerStyle={styles.catContent}
-      >
+      {/* CATEGORIES */}
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.catScroll}>
         {CATEGORIES.map(cat => (
           <TouchableOpacity
             key={cat}
-            style={[styles.catChip, activeCategory === cat && styles.catChipActive]}
+            style={[
+              styles.catChip,
+              activeCategory === cat && styles.catChipActive
+            ]}
             onPress={() => setActiveCategory(cat)}
           >
-            <Text style={[styles.catText, activeCategory === cat && styles.catTextActive]}>
+            <Text style={[
+              styles.catText,
+              activeCategory === cat && styles.catTextActive
+            ]}>
               {cat}
             </Text>
           </TouchableOpacity>
         ))}
       </ScrollView>
 
-      {/* Mission list */}
+      {/* MISSIONS */}
       <ScrollView
         style={styles.missionList}
-        showsVerticalScrollIndicator={false}
         refreshControl={
           <RefreshControl
             refreshing={refreshing}
-            onRefresh={() => fetchMissions(true)}
-            tintColor="#4ade80"
-            title="AI regenerating missions..."
-            titleColor="#86efac"
+            onRefresh={() => {
+              fetchMissions(true);
+              loadUserProfile();
+              loadLeaderboard();
+            }}
           />
         }
       >
+
         <Text style={styles.sectionTitle}>
-          {activeCategory === 'All' ? 'All Missions' : activeCategory}
-          <Text style={styles.sectionCount}> ({filtered.length})</Text>
+          {activeCategory} ({filtered.length})
         </Text>
 
-        {filtered.length === 0 ? (
-          <View style={styles.emptyState}>
-            <Text style={styles.emptyEmoji}>🔍</Text>
-            <Text style={styles.emptyText}>No missions in this category yet.{'\n'}Pull down to regenerate!</Text>
-          </View>
-        ) : (
-          filtered.map((mission) => (
-            <TouchableOpacity
-              key={mission.id}
-              style={styles.missionCard}
-              onPress={() => navigation.navigate('MissionDetail', { mission })}
-              activeOpacity={0.88}
-            >
-              <View style={styles.cardLeft}>
-                <View style={styles.iconBox}>
-                  <Text style={styles.missionEmoji}>{mission.emoji}</Text>
-                </View>
-                <View style={styles.missionInfo}>
-                  <View style={styles.topRow}>
-                    <Text style={styles.missionTitle} numberOfLines={1}>{mission.title}</Text>
-                    <View style={[styles.tagPill, { backgroundColor: (TAG_COLORS[mission.tag] || '#ccc') + '22' }]}>
-                      <Text style={[styles.tagText, { color: TAG_COLORS[mission.tag] || '#ccc' }]}>
-                        {mission.tag}
-                      </Text>
-                    </View>
-                  </View>
-                  <Text style={styles.catLabel}>{mission.category}</Text>
-                  <View style={styles.metaRow}>
-                    <Text style={[styles.diffText, { color: DIFF_COLORS[mission.difficulty] || '#ccc' }]}>
-                      ● {mission.difficulty}
-                    </Text>
-                    <Text style={styles.xpReward}>+{mission.xp} XP</Text>
-                  </View>
-                </View>
-              </View>
-              <Text style={styles.arrow}>›</Text>
-            </TouchableOpacity>
-          ))
-        )}
-        <View style={{ height: 90 }} />
-      </ScrollView>
+        {filtered.map(mission => (
+          <TouchableOpacity
+            key={mission.id}
+            style={styles.missionCard}
+            onPress={() => navigation.navigate('MissionDetail', { mission })}
+          >
+            <Text style={{ fontSize: 26 }}>{mission.emoji}</Text>
 
-      {/* Bottom Nav */}
-      <View style={styles.bottomNav}>
-        {[
-          { icon: '🏠', label: 'Home' },
-          { icon: '🗺️', label: 'Missions' },
-          { icon: '🏅', label: 'Badges' },
-          { icon: '👤', label: 'Profile' },
-        ].map(item => (
-          <TouchableOpacity key={item.label} style={styles.navItem}>
-            <Text style={styles.navIcon}>{item.icon}</Text>
-            <Text style={styles.navLabel}>{item.label}</Text>
+            <View style={{ flex: 1, marginLeft: 12 }}>
+              <Text style={styles.missionTitle}>{mission.title}</Text>
+              <Text style={styles.catLabel}>{mission.category}</Text>
+            </View>
+
+            <Text style={styles.xpReward}>+{mission.xp} XP</Text>
           </TouchableOpacity>
         ))}
-      </View>
+
+        {/* ISSUE 4 FIX: show real badge instead of hardcoded "Guardian" */}
+        <View style={styles.leaderboardCard}>
+          <Text style={styles.leaderboardTitle}>🏆 Top Eco Guardians</Text>
+
+          {leaderboard.length === 0 ? (
+            <Text style={styles.emptyLeaderboard}>No guardians yet — be the first! 🌱</Text>
+          ) : (
+            leaderboard.map((user, i) => (
+              <View key={i} style={styles.leaderboardRow}>
+                <Text style={styles.rankText}>#{i + 1}</Text>
+                <Text style={{ flex: 1, color: '#86efac', fontWeight: '600' }}>
+                  {user.badge || 'Eco Guardian'}
+                </Text>
+                <Text style={styles.leaderboardXP}>⚡ {user.xp}</Text>
+              </View>
+            ))
+          )}
+        </View>
+
+        <View style={{ height: 90 }} />
+
+      </ScrollView>
+
     </View>
   );
 }
 
+// ─────────────────────────────
+// 🎨 STYLES
+// ─────────────────────────────
 const styles = StyleSheet.create({
+
   container: { flex: 1, backgroundColor: '#052e16' },
 
-  // Loading
   loadingContainer: {
     flex: 1, backgroundColor: '#052e16',
     alignItems: 'center', justifyContent: 'center', padding: 32,
   },
-  agentLoader: { alignItems: 'center' },
-  agentLoaderEmoji: { fontSize: 60 },
-  agentLoaderText: { color: '#4ade80', fontSize: 16, fontWeight: '700', textAlign: 'center', marginBottom: 8 },
-  agentLoaderSub: { color: 'rgba(255,255,255,0.4)', fontSize: 13, textAlign: 'center', lineHeight: 20 },
 
-  // Error
-  errorBox: { alignItems: 'center', backgroundColor: '#14532d', borderRadius: 20, padding: 28, width: '100%' },
-  errorEmoji: { fontSize: 44, marginBottom: 12 },
-  errorTitle: { color: '#fff', fontSize: 20, fontWeight: '800', marginBottom: 8 },
-  errorMsg: { color: '#f87171', fontSize: 13, textAlign: 'center', marginBottom: 10 },
-  errorHint: { color: '#86efac', fontSize: 11, textAlign: 'center', marginBottom: 20, lineHeight: 18 },
-  retryBtn: {
-    backgroundColor: '#4ade80', paddingHorizontal: 32, paddingVertical: 12,
-    borderRadius: 24,
+  agentLoaderText: {
+    color: '#4ade80', fontSize: 16, fontWeight: '700',
+    textAlign: 'center', marginTop: 12,
   },
-  retryText: { color: '#052e16', fontWeight: '800', fontSize: 15 },
 
-  // Header
+  errorTitle: { color: '#fff', fontSize: 20, fontWeight: '800', marginBottom: 8 },
+
+  retryText: { color: '#4ade80', fontWeight: '800', fontSize: 15 },
+
   header: {
     flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
     paddingHorizontal: 24, paddingTop: 52, paddingBottom: 14,
   },
+
   greeting: { color: '#86efac', fontSize: 13, fontWeight: '600' },
-  heroName: { color: '#fff', fontSize: 26, fontWeight: '900', letterSpacing: -0.5 },
+
+  heroName: { color: '#fff', fontSize: 26, fontWeight: '900' },
+
+  badgeText: { color: '#fcd34d', marginTop: 4, fontSize: 12, fontWeight: '700' },
+
   xpBadge: {
     backgroundColor: 'rgba(250,204,21,0.15)',
     borderWidth: 1, borderColor: 'rgba(250,204,21,0.3)',
     paddingHorizontal: 14, paddingVertical: 8, borderRadius: 20,
   },
+
   xpText: { color: '#fcd34d', fontWeight: '800', fontSize: 14 },
 
-  // Progress
   progressBanner: {
     marginHorizontal: 20, backgroundColor: '#14532d', borderRadius: 20,
     padding: 18, flexDirection: 'row', justifyContent: 'space-between',
     alignItems: 'center', marginBottom: 10,
     borderWidth: 1, borderColor: 'rgba(74,222,128,0.18)',
   },
+
   progressLeft: { flex: 1 },
+
   progressTitle: { color: '#fff', fontWeight: '800', fontSize: 16 },
+
   progressSub: { color: '#86efac', fontSize: 12, marginTop: 2, marginBottom: 10 },
-  progressBg: { height: 8, backgroundColor: 'rgba(74,222,128,0.15)', borderRadius: 4, width: '90%' },
+
+  progressBg: {
+    height: 8, backgroundColor: 'rgba(74,222,128,0.15)',
+    borderRadius: 4, width: '90%',
+  },
+
   progressFill: { height: 8, backgroundColor: '#4ade80', borderRadius: 4 },
+
   progressRight: { alignItems: 'center', marginLeft: 16 },
+
   levelText: { color: '#fcd34d', fontWeight: '800', fontSize: 12, marginTop: 4 },
 
-  // Agent chip
+  totalXP: { color: '#fff', fontSize: 11, marginTop: 2 },
+
   agentChip: {
     marginHorizontal: 20, marginBottom: 10,
     backgroundColor: 'rgba(74,222,128,0.08)',
     borderWidth: 1, borderColor: 'rgba(74,222,128,0.15)',
     paddingHorizontal: 14, paddingVertical: 7, borderRadius: 14,
   },
+
   agentChipText: { color: '#86efac', fontSize: 11, fontWeight: '700' },
 
-  // Categories
   catScroll: { maxHeight: 46, marginBottom: 6 },
-  catContent: { paddingHorizontal: 20, gap: 8, alignItems: 'center' },
+
   catChip: {
     paddingHorizontal: 16, paddingVertical: 8, borderRadius: 20, marginRight: 8,
     backgroundColor: 'rgba(255,255,255,0.05)',
     borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)',
   },
+
   catChipActive: { backgroundColor: '#4ade80', borderColor: '#4ade80' },
+
   catText: { color: 'rgba(255,255,255,0.55)', fontSize: 13, fontWeight: '600' },
+
   catTextActive: { color: '#052e16', fontWeight: '800' },
 
-  // Mission list
   missionList: { flex: 1, paddingHorizontal: 20 },
-  sectionTitle: { color: '#fff', fontSize: 18, fontWeight: '800', marginTop: 10, marginBottom: 14, letterSpacing: -0.3 },
-  sectionCount: { color: '#86efac', fontWeight: '600' },
 
-  // Empty state
-  emptyState: { alignItems: 'center', paddingVertical: 40 },
-  emptyEmoji: { fontSize: 40, marginBottom: 12 },
-  emptyText: { color: 'rgba(255,255,255,0.4)', fontSize: 14, textAlign: 'center', lineHeight: 22 },
+  sectionTitle: {
+    color: '#fff', fontSize: 18, fontWeight: '800',
+    marginTop: 10, marginBottom: 14,
+  },
 
-  // Mission card
   missionCard: {
-    backgroundColor: '#14532d', borderRadius: 18, padding: 14, marginBottom: 12,
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
-    borderWidth: 1, borderColor: 'rgba(74,222,128,0.12)',
-    shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.2, shadowRadius: 6, elevation: 3,
+    backgroundColor: '#14532d', borderRadius: 18, padding: 14,
+    marginBottom: 12, flexDirection: 'row', alignItems: 'center',
   },
-  cardLeft: { flexDirection: 'row', alignItems: 'center', flex: 1 },
-  iconBox: {
-    width: 52, height: 52, borderRadius: 16,
-    backgroundColor: 'rgba(74,222,128,0.1)',
-    alignItems: 'center', justifyContent: 'center', marginRight: 12,
-  },
-  missionEmoji: { fontSize: 26 },
-  missionInfo: { flex: 1 },
-  topRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: 2 },
-  missionTitle: { color: '#fff', fontWeight: '700', fontSize: 15, flex: 1 },
-  tagPill: { paddingHorizontal: 8, paddingVertical: 3, borderRadius: 10, marginLeft: 8 },
-  tagText: { fontSize: 10, fontWeight: '700' },
-  catLabel: { color: '#86efac', fontSize: 11, marginBottom: 6 },
-  metaRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  diffText: { fontSize: 12, fontWeight: '600' },
-  xpReward: { color: '#fcd34d', fontSize: 12, fontWeight: '700' },
-  arrow: { color: '#4ade80', fontSize: 26, marginLeft: 8 },
 
-  // Bottom nav
-  bottomNav: {
-    flexDirection: 'row', backgroundColor: '#021a0d',
-    paddingVertical: 10, paddingHorizontal: 10,
-    justifyContent: 'space-around',
-    borderTopWidth: 1, borderTopColor: 'rgba(74,222,128,0.12)',
+  missionTitle: { color: '#fff', fontWeight: '700', fontSize: 15 },
+
+  catLabel: { color: '#86efac', fontSize: 11, marginTop: 2 },
+
+  xpReward: { color: '#fcd34d', fontSize: 12, fontWeight: '700' },
+
+  leaderboardCard: {
+    backgroundColor: '#14532d', marginTop: 10, marginBottom: 20,
+    borderRadius: 18, padding: 18,
+    borderWidth: 1, borderColor: 'rgba(74,222,128,0.12)',
   },
-  navItem: { alignItems: 'center', paddingVertical: 4, paddingHorizontal: 12 },
-  navIcon: { fontSize: 22 },
-  navLabel: { color: 'rgba(255,255,255,0.4)', fontSize: 10, marginTop: 3, fontWeight: '600' },
+
+  leaderboardTitle: { color: '#fff', fontSize: 18, fontWeight: '800', marginBottom: 14 },
+
+  leaderboardRow: { flexDirection: 'row', alignItems: 'center', marginBottom: 14 },
+
+  rankText: { color: '#fcd34d', fontWeight: '800', width: 40 },
+
+  leaderboardXP: { color: '#fcd34d', fontWeight: '800' },
+
+  emptyLeaderboard: { color: 'rgba(255,255,255,0.5)', textAlign: 'center', marginTop: 10 },
+
+  levelPopup: {
+    position: 'absolute', top: 60, alignSelf: 'center',
+    backgroundColor: '#fcd34d', paddingHorizontal: 24,
+    paddingVertical: 14, borderRadius: 20, zIndex: 999, elevation: 10,
+  },
+
+  levelPopupText: { color: '#052e16', fontSize: 18, fontWeight: '900' },
 });

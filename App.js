@@ -1,35 +1,53 @@
 // App.js — EcoGuardian: Agentic AI Eco-App for Karachi Children
 // CSC4101 · SZABIST University · AI Semester Project
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+// Screens
 import SplashScreen from './screens/SplashScreen';
 import HomeScreen from './screens/HomeScreen';
-import MissionDetailScreen from './screens/MissionScreen';
+import MissionScreen from './screens/MissionScreen';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+
+  useEffect(() => {
+    console.log("🚀 EcoGuardian App Started");
+  }, []);
+
   return (
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName="Splash"
+
         screenOptions={{
           headerShown: false,
           animation: 'slide_from_right',
           contentStyle: { backgroundColor: '#052e16' },
         }}
       >
-        {/* Screen 1: Splash / Onboarding */}
-        <Stack.Screen name="Splash" component={SplashScreen} />
 
-        {/* Screen 2: Home Dashboard — AI generates missions */}
-        <Stack.Screen name="Home" component={HomeScreen} />
+        {/* Splash Screen */}
+        <Stack.Screen
+          name="Splash"
+          component={SplashScreen}
+        />
 
-        {/* Screen 3: Mission Detail — AI tips + AI verification */}
-        <Stack.Screen name="MissionDetail" component={MissionDetailScreen} />
+        {/* Home Dashboard (AI Missions) */}
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+        />
+
+        {/* Mission Detail Screen */}
+        <Stack.Screen
+          name="MissionDetail"
+          component={MissionScreen}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -37,61 +55,21 @@ export default function App() {
 
 /*
 ═══════════════════════════════════════════════════
-  SETUP INSTRUCTIONS
+  SETUP NOTES
 ═══════════════════════════════════════════════════
 
-  1. Install dependencies:
-     npm install @react-navigation/native @react-navigation/native-stack
-     npm install react-native-screens react-native-safe-area-context
-
-  2. Create a .env file in root:
-     EXPO_PUBLIC_GEMINI_API_KEY=AIzaSy...
-
-  3. Run:
-     npx expo start
+✔ Firebase Project: ecoguardian-8b9cc
+✔ Firestore: users collection required
 
 ═══════════════════════════════════════════════════
-  AGENTIC AI ARCHITECTURE (3 Agents)
+  FLOW
 ═══════════════════════════════════════════════════
 
-  Agent 1 — Mission Generator (HomeScreen)
-  ├── Triggered: on app load + pull-to-refresh
-  ├── Input: child age, completed mission IDs
-  ├── Output: 4 dynamic JSON missions (eco tasks for Karachi)
-  └── Pattern: Goal-based agent → generates new missions each session
+Splash → Home → MissionDetail
 
-  Agent 2 — Contextual Tip Agent (MissionDetailScreen)
-  ├── Triggered: when mission detail screen opens
-  ├── Input: mission title + category
-  ├── Output: reasoning, 3 localized tips, 1 Karachi fact
-  └── Pattern: ReAct (Reason + Act) → reasons about Karachi context
-
-  Agent 3 — Verification Agent (MissionDetailScreen)
-  ├── Triggered: when child taps "Submit for AI Verification"
-  ├── Input: mission title + completed/pending steps
-  ├── Output: verified bool, message, XP bonus, badge, next suggestion
-  └── Pattern: Agentic loop with animated log showing reasoning steps
+Agent 1 → Home (generate missions)
+Agent 2 → MissionDetail (tips)
+Agent 3 → MissionDetail (verification + XP update)
 
 ═══════════════════════════════════════════════════
-  NAVIGATION FLOW
-═══════════════════════════════════════════════════
-
-  SplashScreen
-    ↓ "Begin My Mission" / "Log in"
-  HomeScreen  ← Agent 1 fires here (generates missions)
-    ↓ Tap any mission card
-  MissionDetailScreen  ← Agent 2 fires here (tips)
-    ↓ Complete all steps → "Submit for AI Verification"
-    ↓ Agent 3 fires (verification loop with animated log)
-    ↓ "Back to Missions"
-  HomeScreen
-
-═══════════════════════════════════════════════════
-  COPPA 2025 COMPLIANCE NOTES
-═══════════════════════════════════════════════════
-  ✅ No real names — anonymous IDs only
-  ✅ No biometric storage
-  ✅ City-level location only
-  ✅ All data minimization by default
-  ✅ Parental consent gate on Splash
 */
