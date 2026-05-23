@@ -1,17 +1,17 @@
 {
   "missions": [
     {
-      "title": "Park Cleanliness Mission",
-      "description": "Help keep our park clean by picking up 10 pieces of trash and disposing of them in the proper bins. Take before and after photos to show the impact of your work.",
+      "title": "Gulshan-e-Iqbal Park Clean Up",
+      "description": "The child needs to pick up litter and dispose of it properly in the trash cans at the nearby park in Gulshan-e-Iqbal. Before and after photos of the cleaned area should be taken to document the progress.",
       "civic_issue": "greening",
       "xp_reward": 50,
       "difficulty": "Easy",
-      "estimated_minutes": 15,
+      "estimated_minutes": 10,
       "indoor": false
     },
     {
-      "title": "Drainage Inspection Mission",
-      "description": "Inspect the drains on your street to see if they are clogged with debris or waste. Take before and after photos and report any issues to the authorities, and try to clear any blockages you can safely remove.",
+      "title": "Drainage Inspection and Reporting",
+      "description": "The child needs to inspect the drainage system near their home in Gulshan-e-Iqbal and report any blockages or issues to the local authorities. The child should take before and after photos of the drainage system to document any changes or issues found.",
       "civic_issue": "drainage",
       "xp_reward": 75,
       "difficulty": "Medium",
@@ -19,9 +19,9 @@
       "indoor": false
     },
     {
-      "title": "Neighborhood Recycling Audit Mission",
-      "description": "Conduct a survey of 10 houses in your neighborhood to see if they are properly recycling and report your findings. Provide recommendations for improvement and offer to help them set up a recycling system if needed, and take before and after photos of any changes made.",
-      "civic_issue": "recycling",
+      "title": "Water Conservation Audit",
+      "description": "The child needs to conduct a water conservation audit at their home in Gulshan-e-Iqbal by checking for any leaks, inspecting the water usage of appliances, and providing recommendations for improvement. The child should take before and after photos of the audit process and provide a report on the findings and suggested improvements.",
+      "civic_issue": "water_conservation",
       "xp_reward": 100,
       "difficulty": "Hard",
       "estimated_minutes": 25,
@@ -67,8 +67,8 @@
   "child_age": 12,
   "weather": {
     "condition": "haze",
-    "temp_c": 32.9,
-    "humidity": 55,
+    "temp_c": 27.9,
+    "humidity": 78,
     "is_raining": false,
     "is_indoor": false,
     "indoor_reason": ""
