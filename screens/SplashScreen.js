@@ -2,8 +2,9 @@
 import React, { useEffect, useRef } from 'react';
 import {
   View, Text, StyleSheet, TouchableOpacity,
-  StatusBar, Animated, Dimensions,
+  StatusBar, Animated, Dimensions, ActivityIndicator,
 } from 'react-native';
+import { initAuth } from '../services/authService';
 
 const { height } = Dimensions.get('window');
 
@@ -11,6 +12,7 @@ export default function SplashScreen({ navigation }) {
   const fade = useRef(new Animated.Value(0)).current;
   const slide = useRef(new Animated.Value(50)).current;
   const scale = useRef(new Animated.Value(0.7)).current;
+  const [loading, setLoading] = React.useState(false);
 
   useEffect(() => {
     Animated.sequence([
@@ -21,6 +23,23 @@ export default function SplashScreen({ navigation }) {
       ]),
     ]).start();
   }, []);
+
+  // BUG 3 FIX: wait for Firebase auth before navigating
+  const handleStart = async () => {
+    setLoading(true);
+    try {
+      const user = await initAuth();
+      if (user?.uid) {
+        navigation.navigate('Home');
+      } else {
+        console.log("❌ Auth failed — no UID returned");
+      }
+    } catch (e) {
+      console.log("❌ Auth error:", e.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -43,7 +62,6 @@ export default function SplashScreen({ navigation }) {
             <Text style={styles.earthEmoji}>🌍</Text>
           </View>
         </View>
-        {/* Orbiting icons */}
         {[
           { emoji: '🌱', style: { top: -18, right: 18 } },
           { emoji: '♻️', style: { bottom: -4, left: 8 } },
@@ -73,15 +91,21 @@ export default function SplashScreen({ navigation }) {
       <Animated.View style={[styles.btnArea, { opacity: fade }]}>
         <TouchableOpacity
           style={styles.primaryBtn}
-          onPress={() => navigation.navigate('Home')}
+          onPress={handleStart}
           activeOpacity={0.85}
+          disabled={loading}
         >
-          <Text style={styles.primaryBtnText}>🚀  Begin My Mission</Text>
+          {loading ? (
+            <ActivityIndicator color="#052e16" />
+          ) : (
+            <Text style={styles.primaryBtnText}>🚀  Begin My Mission</Text>
+          )}
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.ghostBtn}
-          onPress={() => navigation.navigate('Home')}
+          onPress={handleStart}
           activeOpacity={0.8}
+          disabled={loading}
         >
           <Text style={styles.ghostBtnText}>Already have an account? Log in</Text>
         </TouchableOpacity>
@@ -122,7 +146,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16, paddingVertical: 6, borderRadius: 20,
   },
   badgeText: { color: '#86efac', fontSize: 11, fontWeight: '700', letterSpacing: 0.4 },
-
   earthWrap: { alignItems: 'center', justifyContent: 'center', position: 'relative' },
   earthOuter: {
     width: 180, height: 180, borderRadius: 90,
@@ -140,11 +163,9 @@ const styles = StyleSheet.create({
     position: 'absolute', width: 40, height: 40, borderRadius: 20,
     backgroundColor: '#14532d',
     alignItems: 'center', justifyContent: 'center',
-    shadowColor: '#000', shadowOffset: { width: 0, height: 3 },
-    shadowOpacity: 0.35, shadowRadius: 5, elevation: 5,
+    elevation: 5,
   },
   orbitEmoji: { fontSize: 18 },
-
   textBlock: { alignItems: 'center', width: '100%' },
   appName: {
     fontSize: 46, fontWeight: '900', color: '#fff',
@@ -161,12 +182,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12, paddingVertical: 5, borderRadius: 20,
   },
   pillText: { color: '#86efac', fontSize: 11, fontWeight: '700' },
-
   btnArea: { width: '100%', gap: 10 },
   primaryBtn: {
     backgroundColor: '#4ade80', paddingVertical: 17, borderRadius: 32, alignItems: 'center',
-    shadowColor: '#4ade80', shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.4, shadowRadius: 16, elevation: 8,
+    elevation: 8,
   },
   primaryBtnText: { color: '#052e16', fontSize: 17, fontWeight: '900', letterSpacing: 0.3 },
   ghostBtn: {
@@ -174,7 +193,6 @@ const styles = StyleSheet.create({
     borderWidth: 1.5, borderColor: 'rgba(74,222,128,0.3)',
   },
   ghostBtnText: { color: '#86efac', fontSize: 14, fontWeight: '600' },
-
   footer: {
     color: 'rgba(255,255,255,0.25)', fontSize: 10,
     textAlign: 'center', lineHeight: 15,

@@ -1,378 +1,524 @@
 // screens/MissionDetailScreen.js
-// AI-POWERED:
-//   Agent 2 → getMissionTips()   : ReAct-style contextual tips for this mission
-//   Agent 3 → verifyMissionCompletion() : AI verifies completion, awards XP bonus
-
-import React, { useState, useEffect } from 'react';
+// ─────────────────────────────────────────────
+// EcoGuardian AI System (Mission Screen)
+// CSC4101 · SZABIST University Project
+//
+// 🤖 Agent 2 → getMissionTips()
+// 🤖 Agent 3 → verifyMissionCompletion()
+// 💰 XP SYSTEM → addXP() Firestore update
+// 👤 PROFILE SYSTEM → get updated profile after XP
+// ✅ BUG FIXED VERSION
+// ─────────────────────────────────────────────
+ 
+import React, { useState, useEffect, useRef } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, ScrollView,
-  StatusBar, ActivityIndicator,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+  StatusBar,
+  ActivityIndicator,
+  Alert,
+  Animated
 } from 'react-native';
-import { getMissionTips, verifyMissionCompletion } from '../services/aiservice';
-
+ 
+import { getAuth } from "firebase/auth";
+import {
+  getMissionTips,
+  verifyMissionCompletion
+} from '../services/aiservice';
+ 
+import { getUserProfile, addXP } from '../services/userService';
+ 
 export default function MissionDetailScreen({ navigation, route }) {
-  const { mission } = route.params;
-
-  const [steps, setSteps] = useState(
-    (mission.steps || ['Read mission briefing', 'Complete real-world action', 'Take a photo', 'Submit for verification'])
-      .map((text, i) => ({ id: i + 1, text, done: false }))
-  );
-
-  // Agent 2 state
-  const [tips, setTips] = useState(null);
+ 
+  const { mission = {} } = route.params || {};
+  const auth = getAuth();
+  const userId = auth.currentUser?.uid;
+ 
+  const isMounted = useRef(true);
+  const xpUpdated = useRef(false);
+ 
+  const levelAnim = useRef(new Animated.Value(0)).current;
+ 
+  const [showLevelUp, setShowLevelUp] = useState(false);
+  const [xpPopup, setXpPopup] = useState(null);
+ 
+  const [aiTip, setAiTip] = useState('');
   const [tipsLoading, setTipsLoading] = useState(true);
-  const [tipsError, setTipsError] = useState(null);
-
-  // Agent 3 state
+ 
+  const [userProfile, setUserProfile] = useState({
+    xp: 0,
+    level: 1,
+    badge: "Beginner 🌱"
+  });
+ 
+  const [steps, setSteps] = useState(
+    (mission.steps || [
+      'Read mission briefing',
+      'Complete eco action',
+      'Take proof photo',
+      'Submit mission'
+    ]).map((text, index) => ({
+      id: index + 1,
+      text,
+      done: false
+    }))
+  );
+ 
   const [verifyResult, setVerifyResult] = useState(null);
   const [verifying, setVerifying] = useState(false);
-  const [agentLog, setAgentLog] = useState([]);
-
-  const completedCount = steps.filter(s => s.done).length;
-  const allDone = completedCount === steps.length;
-
-  // ── Load AI tips when screen mounts ──────────────────────────
+ 
+  const allDone = steps.every(step => step.done);
+ 
+  // ─────────────────────────────
+  // SAFE MOUNT
+  // ─────────────────────────────
   useEffect(() => {
-    (async () => {
-      setTipsLoading(true);
-      setTipsError(null);
-      try {
-        const data = await getMissionTips(mission.title, mission.category);
-        setTips(data);
-      } catch (e) {
-        setTipsError(e.message);
-      } finally {
-        setTipsLoading(false);
-      }
-    })();
-  }, [mission.title, mission.category]);
-
-  // ── Toggle step ───────────────────────────────────────────────
-  const toggleStep = (id) => {
-    if (verifyResult) return; // locked after verification
-    setSteps(prev => prev.map(s => s.id === id ? { ...s, done: !s.done } : s));
-  };
-
-  // ── AI verification (Agent 3, agentic loop with log) ─────────
-  const handleVerify = async () => {
-    if (!allDone || verifying) return;
-    setVerifying(true);
-    setAgentLog([]);
-
-    const logs = [
-      '🤖 Agent initializing verification loop...',
-      '🔍 Analyzing completed steps...',
-      '🌍 Cross-referencing Karachi eco-data...',
-      '📊 Calculating XP reward...',
-      '✅ Verification complete!',
-    ];
-
-    // Animate log lines with delay
-    for (let i = 0; i < logs.length; i++) {
-      await new Promise(r => setTimeout(r, 700));
-      setAgentLog(prev => [...prev, logs[i]]);
-    }
-
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+ 
+  // ─────────────────────────────
+  // PROFILE LOAD
+  // ─────────────────────────────
+  const loadUserProfile = async () => {
     try {
-      const result = await verifyMissionCompletion(mission.title, steps);
+      const data = await getUserProfile(userId);
+      if (data && isMounted.current) setUserProfile(data);
+    } catch (e) {
+      console.log("PROFILE ERROR:", e.message);
+    }
+  };
+ 
+  // ─────────────────────────────
+  // LEVEL UP ANIMATION
+  // ─────────────────────────────
+  const triggerLevelUpAnimation = () => {
+    levelAnim.setValue(0);
+ 
+    Animated.spring(levelAnim, {
+      toValue: 1,
+      friction: 5,
+      tension: 80,
+      useNativeDriver: true
+    }).start();
+ 
+    setTimeout(() => {
+      if (isMounted.current) setShowLevelUp(false);
+    }, 2000);
+  };
+ 
+  // ─────────────────────────────
+  // AI TIPS
+  // ─────────────────────────────
+  const loadAITips = async () => {
+    try {
+      setTipsLoading(true);
+      const data = await getMissionTips(mission.title, mission.category);
+      if (isMounted.current && data?.tips) {
+        setAiTip(data.tips);
+      }
+    } catch (e) {
+      console.log("TIPS ERROR:", e.message);
+    } finally {
+      if (isMounted.current) setTipsLoading(false);
+    }
+  };
+ 
+  useEffect(() => {
+    if (!userId) return;
+    loadUserProfile();
+    loadAITips();
+  }, [userId, mission?.id]);
+ 
+  // ─────────────────────────────
+  // STEP TOGGLE
+  // ─────────────────────────────
+  const toggleStep = (id) => {
+    if (verifyResult) return;
+    setSteps(prev =>
+      prev.map(step =>
+        step.id === id ? { ...step, done: !step.done } : step
+      )
+    );
+  };
+ 
+  // ─────────────────────────────
+  // FIX: Try Another Mission → Home
+  // ─────────────────────────────
+  const resetMission = () => {
+    setSteps(prev => prev.map(step => ({ ...step, done: false })));
+    setVerifyResult(null);
+    xpUpdated.current = false;
+    setXpPopup(null);
+    setShowLevelUp(false);
+    navigation.navigate('Home');
+  };
+ 
+  // ─────────────────────────────
+  // VERIFY + XP
+  // ─────────────────────────────
+  const handleVerify = async () => {
+ 
+    if (!allDone || verifying) {
+      Alert.alert("Incomplete Mission", "Complete all steps first.");
+      return;
+    }
+ 
+    setVerifying(true);
+ 
+    try {
+ 
+      const result = await verifyMissionCompletion(
+        mission.title,
+        steps
+      );
+ 
+      if (!isMounted.current) return;
+ 
       setVerifyResult(result);
+ 
+      if (result?.xpBonus > 0 && !xpUpdated.current) {
+ 
+        xpUpdated.current = true;
+ 
+        const updatedProfile = await addXP(userId, result.xpBonus);
+ 
+        if (updatedProfile && isMounted.current) {
+ 
+          const prevLevel = userProfile.level;
+          setUserProfile(updatedProfile);
+ 
+          setXpPopup(result.xpBonus);
+          setTimeout(() => {
+            if (isMounted.current) setXpPopup(null);
+          }, 2000);
+ 
+          if (updatedProfile.level > prevLevel) {
+            setShowLevelUp(true);
+            triggerLevelUpAnimation();
+          }
+ 
+          navigation.setParams({
+            xpUpdated: true,
+            leaderboardRefresh: Date.now()
+          });
+        }
+      }
+ 
     } catch (e) {
       setVerifyResult({
         verified: false,
-        message: 'Could not reach AI verifier. Check your API key.',
-        xpBonus: 0,
-        badge: null,
-        nextSuggestion: 'Try again when connected.',
+        message: "Verification failed",
+        xpBonus: 0
       });
+ 
     } finally {
-      setVerifying(false);
+      if (isMounted.current) setVerifying(false);
     }
   };
-
-  const DIFF_COLORS = { Easy: '#4ade80', Medium: '#fbbf24', Hard: '#f87171' };
-
+ 
+  // ─────────────────────────────
+  // UI
+  // ─────────────────────────────
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#052e16" />
-
-      {/* Top bar */}
-      <View style={styles.topBar}>
-        <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
-          <Text style={styles.backArrow}>←</Text>
-          <Text style={styles.backText}>Missions</Text>
-        </TouchableOpacity>
-        <View style={styles.diffBadge}>
-          <Text style={[styles.diffText, { color: DIFF_COLORS[mission.difficulty] || '#ccc' }]}>
-            ● {mission.difficulty}
-          </Text>
+ 
+      <ScrollView>
+ 
+        {/* XP POPUP */}
+        {xpPopup && (
+          <View style={styles.xpPopup}>
+            <Text style={styles.xpPopupText}>
+              +{xpPopup} XP 🎉
+            </Text>
+          </View>
+        )}
+ 
+        {/* LEVEL UP ANIMATION */}
+        {showLevelUp && (
+          <Animated.View
+            style={[
+              styles.levelPopup,
+              {
+                opacity: levelAnim,
+                transform: [
+                  {
+                    scale: levelAnim.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [0.5, 1.2]
+                    })
+                  }
+                ]
+              }
+            ]}
+          >
+            <Text style={styles.levelPopupText}>
+              🏆 LEVEL UP!
+            </Text>
+          </Animated.View>
+        )}
+ 
+        {/* HERO */}
+        <View style={styles.hero}>
+          <Text style={styles.missionEmoji}>{mission.emoji}</Text>
+          <Text style={styles.title}>{mission.title}</Text>
+          <Text style={styles.desc}>{mission.desc}</Text>
         </View>
-      </View>
-
-      <ScrollView showsVerticalScrollIndicator={false}>
-
-        {/* Hero card */}
-        <View style={styles.heroCard}>
-          <View style={styles.heroIconCircle}>
-            <Text style={styles.heroEmoji}>{mission.emoji}</Text>
-          </View>
-          <Text style={styles.heroCat}>{mission.category}</Text>
-          <Text style={styles.heroTitle}>{mission.title}</Text>
-          <Text style={styles.heroDesc}>{mission.desc}</Text>
-
-          {/* Stats */}
-          <View style={styles.statsRow}>
-            {[
-              { label: 'XP Reward', value: `+${mission.xp}`, color: '#fcd34d' },
-              { label: 'Steps Done', value: `${completedCount}/${steps.length}`, color: '#fff' },
-              { label: 'Status', value: allDone ? '✅ Done' : '🔄 Active', color: '#4ade80' },
-            ].map((s, i) => (
-              <React.Fragment key={s.label}>
-                {i > 0 && <View style={styles.statDivider} />}
-                <View style={styles.statBox}>
-                  <Text style={[styles.statValue, { color: s.color }]}>{s.value}</Text>
-                  <Text style={styles.statLabel}>{s.label}</Text>
-                </View>
-              </React.Fragment>
-            ))}
-          </View>
-
-          {/* Progress bar */}
-          <View style={styles.progressBg}>
-            <View style={[styles.progressFill, {
-              width: `${steps.length > 0 ? (completedCount / steps.length) * 100 : 0}%`,
-            }]} />
-          </View>
+ 
+        {/* PROFILE */}
+        <View style={styles.profileCard}>
+          <Text style={styles.profileXP}>⚡ {userProfile.xp} XP</Text>
+          <Text style={styles.profileBadge}>{userProfile.badge}</Text>
         </View>
-
-        {/* AI Tips Card (Agent 2) */}
-        <View style={styles.tipsCard}>
-          <Text style={styles.tipsHeader}>🤖 AI Agent Insights</Text>
-
+ 
+        {/* AI TIPS CARD */}
+        <View style={styles.card}>
+          <Text style={styles.cardTitle}>🤖 AI Eco Tip</Text>
           {tipsLoading ? (
-            <View style={styles.tipsLoading}>
-              <ActivityIndicator size="small" color="#4ade80" />
-              <Text style={styles.tipsLoadingText}>Agent reasoning about this mission...</Text>
-            </View>
-          ) : tipsError ? (
-            <Text style={styles.tipsErr}>⚠️ Could not load tips: {tipsError}</Text>
-          ) : tips ? (
-            <>
-              <View style={styles.reasoningBox}>
-                <Text style={styles.reasoningLabel}>Agent Reasoning:</Text>
-                <Text style={styles.reasoningText}>{tips.agentReasoning}</Text>
-              </View>
-              {tips.tips.map((tip, i) => (
-                <View key={i} style={styles.tipRow}>
-                  <View style={styles.tipBullet}><Text style={styles.tipNum}>{i + 1}</Text></View>
-                  <Text style={styles.tipText}>{tip}</Text>
-                </View>
-              ))}
-              <View style={styles.factBox}>
-                <Text style={styles.factLabel}>📍 Karachi Fact</Text>
-                <Text style={styles.factText}>{tips.karachi_fact}</Text>
-              </View>
-            </>
-          ) : null}
+            <ActivityIndicator color="#4ade80" size="small" />
+          ) : (
+            <Text style={styles.tipText}>{aiTip || 'Follow eco-friendly practices for this mission.'}</Text>
+          )}
         </View>
-
-        {/* Steps Checklist */}
-        <View style={styles.stepsCard}>
-          <Text style={styles.stepsHeader}>Mission Steps</Text>
+ 
+        {/* STEPS */}
+        <View style={styles.card}>
+          <Text style={styles.cardTitle}>Mission Steps</Text>
+ 
           {steps.map(step => (
             <TouchableOpacity
               key={step.id}
-              style={[styles.stepRow, step.done && styles.stepRowDone]}
               onPress={() => toggleStep(step.id)}
-              activeOpacity={0.8}
+              style={styles.step}
             >
-              <View style={[styles.stepCheck, step.done && styles.stepCheckDone]}>
-                {step.done && <Text style={styles.checkMark}>✓</Text>}
-              </View>
-              <Text style={[styles.stepText, step.done && styles.stepTextDone]}>
-                {step.text}
+              <Text style={{ color: step.done ? '#4ade80' : '#fff' }}>
+                {step.done ? "✅" : "⬜"} {step.text}
               </Text>
             </TouchableOpacity>
           ))}
         </View>
-
-        {/* AI Verification Result */}
+ 
+        {/* VERIFY */}
+        <TouchableOpacity
+          style={[styles.btn, !allDone && { opacity: 0.4 }]}
+          onPress={handleVerify}
+          disabled={!allDone || verifying}
+        >
+          {verifying ? (
+            <ActivityIndicator color="#052e16" />
+          ) : (
+            <Text style={styles.btnText}>🚀 Submit Mission</Text>
+          )}
+        </TouchableOpacity>
+ 
+        {/* RESULT */}
         {verifyResult && (
-          <View style={[styles.resultCard, verifyResult.verified ? styles.resultSuccess : styles.resultFail]}>
-            <Text style={styles.resultEmoji}>{verifyResult.verified ? '🏆' : '⚠️'}</Text>
-            <Text style={styles.resultMsg}>{verifyResult.message}</Text>
-            {verifyResult.xpBonus > 0 && (
-              <Text style={styles.resultBonus}>+{verifyResult.xpBonus} Bonus XP earned!</Text>
-            )}
-            {verifyResult.badge && (
-              <View style={styles.badgeWon}>
-                <Text style={styles.badgeWonText}>🏅 Badge unlocked: {verifyResult.badge}</Text>
-              </View>
-            )}
-            <Text style={styles.resultNext}>💡 {verifyResult.nextSuggestion}</Text>
-          </View>
-        )}
-
-        {/* Agentic log */}
-        {(verifying || agentLog.length > 0) && !verifyResult && (
-          <View style={styles.logCard}>
-            <Text style={styles.logHeader}>🤖 Agent Log</Text>
-            {agentLog.map((line, i) => (
-              <Text key={i} style={styles.logLine}>{line}</Text>
-            ))}
-            {verifying && <ActivityIndicator size="small" color="#4ade80" style={{ marginTop: 8 }} />}
-          </View>
-        )}
-
-        {/* COPPA note */}
-        <View style={styles.coppaBox}>
-          <Text style={styles.coppaTitle}>🔒 Privacy & Safety (COPPA 2025)</Text>
-          <Text style={styles.coppaText}>
-            Photos processed on-device only. No biometric data stored. Location limited to city-level.
-            Anonymous Firebase Auth IDs in use. Parental consent active.
-          </Text>
-        </View>
-
-        <View style={{ height: 110 }} />
-      </ScrollView>
-
-      {/* Bottom action */}
-      <View style={styles.bottomAction}>
-        {verifyResult ? (
-          <TouchableOpacity style={styles.doneBtn} onPress={() => navigation.goBack()}>
-            <Text style={styles.doneBtnText}>← Back to Missions</Text>
-          </TouchableOpacity>
-        ) : verifying ? (
-          <View style={styles.verifyingBtn}>
-            <ActivityIndicator size="small" color="#052e16" />
-            <Text style={styles.verifyingText}>  AI Agent Verifying...</Text>
-          </View>
-        ) : (
-          <TouchableOpacity
-            style={[styles.submitBtn, !allDone && styles.submitBtnDisabled]}
-            onPress={handleVerify}
-            activeOpacity={allDone ? 0.85 : 1}
-          >
-            <Text style={styles.submitBtnText}>
-              {allDone
-                ? '🚀  Submit for AI Verification'
-                : `Complete all steps (${completedCount}/${steps.length})`}
+          <View style={styles.result}>
+            <Text style={styles.resultTitle}>
+              {verifyResult.verified ? "✅ Verified!" : "❌ Failed"}
             </Text>
-          </TouchableOpacity>
+ 
+            <Text style={styles.resultMsg}>
+              {verifyResult.message}
+            </Text>
+ 
+            {verifyResult.xpBonus > 0 && (
+              <Text style={styles.rewardText}>
+                +{verifyResult.xpBonus} XP Earned
+              </Text>
+            )}
+ 
+            {/* Try Another Mission → navigates to Home */}
+            <TouchableOpacity style={styles.resetBtn} onPress={resetMission}>
+              <Text style={styles.resetText}>🔄 Try Another Mission</Text>
+            </TouchableOpacity>
+          </View>
         )}
-      </View>
+ 
+        <View style={{ height: 50 }} />
+      </ScrollView>
     </View>
   );
 }
-
+ 
+// ─────────────────────────────
+// 🎨 STYLES
+// ─────────────────────────────
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#052e16' },
-
-  topBar: {
-    flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center',
-    paddingHorizontal: 20, paddingTop: 52, paddingBottom: 12,
+ 
+  container: {
+    flex: 1,
+    backgroundColor: '#052e16'
   },
-  backBtn: { flexDirection: 'row', alignItems: 'center', gap: 6 },
-  backArrow: { color: '#4ade80', fontSize: 22 },
-  backText: { color: '#4ade80', fontSize: 15, fontWeight: '700' },
-  diffBadge: {
-    backgroundColor: 'rgba(255,255,255,0.06)', paddingHorizontal: 14,
-    paddingVertical: 6, borderRadius: 14,
+ 
+  hero: {
+    padding: 24,
+    alignItems: 'center'
   },
-  diffText: { fontSize: 13, fontWeight: '700' },
-
-  heroCard: {
-    backgroundColor: '#14532d', marginHorizontal: 20, borderRadius: 24, padding: 22,
-    alignItems: 'center', borderWidth: 1, borderColor: 'rgba(74,222,128,0.18)', marginBottom: 14,
+ 
+  missionEmoji: {
+    fontSize: 60,
+    marginBottom: 10
   },
-  heroIconCircle: {
-    width: 90, height: 90, borderRadius: 45,
-    backgroundColor: 'rgba(74,222,128,0.1)',
-    borderWidth: 2, borderColor: 'rgba(74,222,128,0.22)',
-    alignItems: 'center', justifyContent: 'center', marginBottom: 12,
+ 
+  title: {
+    fontSize: 26,
+    color: '#fff',
+    fontWeight: '800',
+    textAlign: 'center'
   },
-  heroEmoji: { fontSize: 46 },
-  heroCat: { color: '#86efac', fontSize: 11, fontWeight: '700', letterSpacing: 1, textTransform: 'uppercase', marginBottom: 6 },
-  heroTitle: { color: '#fff', fontSize: 26, fontWeight: '900', letterSpacing: -0.5, textAlign: 'center', marginBottom: 10 },
-  heroDesc: { color: 'rgba(255,255,255,0.55)', fontSize: 14, textAlign: 'center', lineHeight: 21, marginBottom: 18 },
-
-  statsRow: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%', marginBottom: 16 },
-  statBox: { alignItems: 'center', flex: 1 },
-  statValue: { fontSize: 20, fontWeight: '900' },
-  statLabel: { color: 'rgba(255,255,255,0.4)', fontSize: 11, marginTop: 3, fontWeight: '600' },
-  statDivider: { width: 1, height: 36, backgroundColor: 'rgba(255,255,255,0.1)' },
-  progressBg: { width: '100%', height: 8, backgroundColor: 'rgba(74,222,128,0.15)', borderRadius: 4 },
-  progressFill: { height: 8, backgroundColor: '#4ade80', borderRadius: 4 },
-
-  tipsCard: {
-    backgroundColor: 'rgba(74,222,128,0.07)', marginHorizontal: 20, borderRadius: 18, padding: 16,
-    borderWidth: 1, borderColor: 'rgba(74,222,128,0.15)', marginBottom: 14,
+ 
+  desc: {
+    color: '#d1d5db',
+    marginTop: 10,
+    textAlign: 'center',
+    lineHeight: 22
   },
-  tipsHeader: { color: '#86efac', fontWeight: '800', fontSize: 14, marginBottom: 12 },
-  tipsLoading: { flexDirection: 'row', alignItems: 'center', gap: 10 },
-  tipsLoadingText: { color: 'rgba(255,255,255,0.4)', fontSize: 13 },
-  tipsErr: { color: '#f87171', fontSize: 12 },
-  reasoningBox: { backgroundColor: 'rgba(0,0,0,0.2)', borderRadius: 12, padding: 12, marginBottom: 12 },
-  reasoningLabel: { color: '#4ade80', fontSize: 11, fontWeight: '800', marginBottom: 4 },
-  reasoningText: { color: 'rgba(255,255,255,0.7)', fontSize: 13, lineHeight: 20, fontStyle: 'italic' },
-  tipRow: { flexDirection: 'row', alignItems: 'flex-start', marginBottom: 8, gap: 10 },
-  tipBullet: {
-    width: 22, height: 22, borderRadius: 11, backgroundColor: '#4ade80',
-    alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 1,
+ 
+  profileCard: {
+    marginHorizontal: 20,
+    backgroundColor: '#14532d',
+    borderRadius: 18,
+    padding: 18,
+    marginBottom: 16,
   },
-  tipNum: { color: '#052e16', fontSize: 11, fontWeight: '900' },
-  tipText: { color: 'rgba(255,255,255,0.65)', fontSize: 13, lineHeight: 20, flex: 1 },
-  factBox: { backgroundColor: 'rgba(250,204,21,0.08)', borderRadius: 12, padding: 12, marginTop: 6 },
-  factLabel: { color: '#fcd34d', fontSize: 11, fontWeight: '800', marginBottom: 4 },
-  factText: { color: 'rgba(255,255,255,0.6)', fontSize: 12, lineHeight: 18 },
-
-  stepsCard: {
-    backgroundColor: '#14532d', marginHorizontal: 20, borderRadius: 18, padding: 16,
-    borderWidth: 1, borderColor: 'rgba(74,222,128,0.12)', marginBottom: 14,
+ 
+  profileXP: {
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: '800'
   },
-  stepsHeader: { color: '#fff', fontWeight: '800', fontSize: 16, marginBottom: 14 },
-  stepRow: { flexDirection: 'row', alignItems: 'center', paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.06)', gap: 12 },
-  stepRowDone: { opacity: 0.6 },
-  stepCheck: { width: 28, height: 28, borderRadius: 14, borderWidth: 2, borderColor: 'rgba(74,222,128,0.4)', alignItems: 'center', justifyContent: 'center' },
-  stepCheckDone: { backgroundColor: '#4ade80', borderColor: '#4ade80' },
-  checkMark: { color: '#052e16', fontSize: 14, fontWeight: '900' },
-  stepText: { color: 'rgba(255,255,255,0.8)', fontSize: 14, flex: 1, lineHeight: 20 },
-  stepTextDone: { textDecorationLine: 'line-through', color: 'rgba(255,255,255,0.35)' },
-
-  logCard: {
-    marginHorizontal: 20, backgroundColor: 'rgba(0,0,0,0.3)',
-    borderRadius: 14, padding: 16, marginBottom: 12,
-    borderWidth: 1, borderColor: 'rgba(74,222,128,0.1)',
+ 
+  profileBadge: {
+    color: '#fcd34d',
+    marginTop: 4,
+    fontWeight: '700'
   },
-  logHeader: { color: '#86efac', fontWeight: '800', fontSize: 13, marginBottom: 10 },
-  logLine: { color: 'rgba(255,255,255,0.55)', fontSize: 12, lineHeight: 22 },
-
-  resultCard: { marginHorizontal: 20, borderRadius: 18, padding: 20, marginBottom: 14, alignItems: 'center' },
-  resultSuccess: { backgroundColor: 'rgba(74,222,128,0.1)', borderWidth: 1, borderColor: '#4ade80' },
-  resultFail: { backgroundColor: 'rgba(248,113,113,0.1)', borderWidth: 1, borderColor: '#f87171' },
-  resultEmoji: { fontSize: 40, marginBottom: 10 },
-  resultMsg: { color: '#fff', fontWeight: '700', fontSize: 15, textAlign: 'center', marginBottom: 8 },
-  resultBonus: { color: '#fcd34d', fontWeight: '800', fontSize: 14, marginBottom: 8 },
-  badgeWon: { backgroundColor: 'rgba(250,204,21,0.12)', paddingHorizontal: 16, paddingVertical: 8, borderRadius: 12, marginBottom: 8 },
-  badgeWonText: { color: '#fcd34d', fontWeight: '700', fontSize: 13 },
-  resultNext: { color: 'rgba(255,255,255,0.5)', fontSize: 12, textAlign: 'center', lineHeight: 18 },
-
-  coppaBox: { marginHorizontal: 20, backgroundColor: 'rgba(0,0,0,0.2)', borderRadius: 14, padding: 14, marginBottom: 8, borderWidth: 1, borderColor: 'rgba(255,255,255,0.06)' },
-  coppaTitle: { color: 'rgba(255,255,255,0.45)', fontWeight: '700', fontSize: 12, marginBottom: 6 },
-  coppaText: { color: 'rgba(255,255,255,0.3)', fontSize: 11, lineHeight: 17 },
-
-  bottomAction: {
-    position: 'absolute', bottom: 0, left: 0, right: 0,
-    backgroundColor: '#021a0d', paddingHorizontal: 20, paddingVertical: 16,
-    borderTopWidth: 1, borderTopColor: 'rgba(74,222,128,0.12)',
+ 
+  card: {
+    marginHorizontal: 20,
+    marginBottom: 16,
+    padding: 18,
+    backgroundColor: '#14532d',
+    borderRadius: 18,
   },
-  submitBtn: {
-    backgroundColor: '#4ade80', paddingVertical: 17, borderRadius: 32, alignItems: 'center',
-    shadowColor: '#4ade80', shadowOffset: { width: 0, height: 6 }, shadowOpacity: 0.4, shadowRadius: 12, elevation: 7,
+ 
+  cardTitle: {
+    color: '#fff',
+    marginBottom: 14,
+    fontWeight: '800',
+    fontSize: 16
   },
-  submitBtnDisabled: { backgroundColor: 'rgba(74,222,128,0.2)', shadowOpacity: 0, elevation: 0 },
-  submitBtnText: { color: '#052e16', fontWeight: '900', fontSize: 16 },
-  verifyingBtn: { backgroundColor: '#4ade80', paddingVertical: 17, borderRadius: 32, alignItems: 'center', flexDirection: 'row', justifyContent: 'center' },
-  verifyingText: { color: '#052e16', fontWeight: '900', fontSize: 16 },
-  doneBtn: { borderWidth: 1.5, borderColor: '#4ade80', paddingVertical: 16, borderRadius: 32, alignItems: 'center' },
-  doneBtnText: { color: '#4ade80', fontWeight: '800', fontSize: 16 },
+ 
+  tipText: {
+    color: '#d1d5db',
+    lineHeight: 22
+  },
+ 
+  step: {
+    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255,255,255,0.08)'
+  },
+ 
+  btn: {
+    backgroundColor: '#4ade80',
+    marginHorizontal: 20,
+    marginTop: 10,
+    padding: 16,
+    borderRadius: 20,
+    alignItems: 'center'
+  },
+ 
+  btnText: {
+    color: '#052e16',
+    fontWeight: '800',
+    fontSize: 16
+  },
+ 
+  resetBtn: {
+    marginTop: 14,
+    padding: 14,
+    borderRadius: 18,
+    borderWidth: 1,
+    borderColor: '#4ade80',
+    alignItems: 'center'
+  },
+ 
+  resetText: {
+    color: '#4ade80',
+    fontWeight: '700'
+  },
+ 
+  result: {
+    marginHorizontal: 20,
+    backgroundColor: '#14532d',
+    borderRadius: 18,
+    padding: 20,
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: 'rgba(74,222,128,0.2)'
+  },
+ 
+  resultTitle: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: '800',
+    marginBottom: 8
+  },
+ 
+  resultMsg: {
+    color: '#d1d5db',
+    lineHeight: 22
+  },
+ 
+  rewardText: {
+    color: '#4ade80',
+    marginTop: 12,
+    fontWeight: '800',
+    fontSize: 16
+  },
+ 
+  xpPopup: {
+    position: 'absolute',
+    top: 60,
+    alignSelf: 'center',
+    backgroundColor: '#4ade80',
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    borderRadius: 20,
+    zIndex: 999,
+    elevation: 10,
+  },
+ 
+  xpPopupText: {
+    color: '#052e16',
+    fontSize: 18,
+    fontWeight: '900'
+  },
+ 
+  levelPopup: {
+    position: 'absolute',
+    top: 120,
+    alignSelf: 'center',
+    backgroundColor: '#fcd34d',
+    paddingHorizontal: 24,
+    paddingVertical: 14,
+    borderRadius: 20,
+    zIndex: 999,
+    elevation: 10,
+  },
+ 
+  levelPopupText: {
+    color: '#052e16',
+    fontSize: 18,
+    fontWeight: '900'
+  }
+ 
 });
+ 
