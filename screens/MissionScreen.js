@@ -4,12 +4,12 @@
 // CSC4101 · SZABIST University Project
 //
 // 🤖 Agent 2 → getMissionTips()
-// 🤖 Agent 3 → verifyMissionCompletion()
+// 🤖 Agent 3 → verifyMissionCompletion() [Updated with Real Image Verification]
 // 💰 XP SYSTEM → addXP() Firestore update
 // 👤 PROFILE SYSTEM → get updated profile after XP
-// ✅ BUG FIXED VERSION
+// ✅ BUG FIXED + CAMERA INTEGRATED VERSION
 // ─────────────────────────────────────────────
- 
+
 import React, { useState, useEffect, useRef } from 'react';
 import {
   View,
@@ -20,40 +20,47 @@ import {
   StatusBar,
   ActivityIndicator,
   Alert,
-  Animated
+  Animated,
+  Image
 } from 'react-native';
- 
+
 import { getAuth } from "firebase/auth";
+import * as ImagePicker from 'expo-image-picker'; // Expo Camera
+
 import {
   getMissionTips,
   verifyMissionCompletion
 } from '../services/aiservice';
- 
+
 import { getUserProfile, addXP } from '../services/userService';
- 
+
 export default function MissionDetailScreen({ navigation, route }) {
- 
+
   const { mission = {} } = route.params || {};
   const auth = getAuth();
   const userId = auth.currentUser?.uid;
- 
+
   const isMounted = useRef(true);
   const xpUpdated = useRef(false);
- 
+
   const levelAnim = useRef(new Animated.Value(0)).current;
- 
+
   const [showLevelUp, setShowLevelUp] = useState(false);
   const [xpPopup, setXpPopup] = useState(null);
- 
+
   const [aiTip, setAiTip] = useState('');
   const [tipsLoading, setTipsLoading] = useState(true);
- 
+
+  // Images states for Agent 3 verification
+  const [beforeImage, setBeforeImage] = useState(null);
+  const [afterImage, setAfterImage] = useState(null);
+
   const [userProfile, setUserProfile] = useState({
     xp: 0,
     level: 1,
     badge: "Beginner 🌱"
   });
- 
+
   const [steps, setSteps] = useState(
     (mission.steps || [
       'Read mission briefing',
@@ -66,12 +73,12 @@ export default function MissionDetailScreen({ navigation, route }) {
       done: false
     }))
   );
- 
+
   const [verifyResult, setVerifyResult] = useState(null);
   const [verifying, setVerifying] = useState(false);
- 
+
   const allDone = steps.every(step => step.done);
- 
+
   // ─────────────────────────────
   // SAFE MOUNT
   // ─────────────────────────────
@@ -80,7 +87,7 @@ export default function MissionDetailScreen({ navigation, route }) {
       isMounted.current = false;
     };
   }, []);
- 
+
   // ─────────────────────────────
   // PROFILE LOAD
   // ─────────────────────────────
@@ -92,27 +99,27 @@ export default function MissionDetailScreen({ navigation, route }) {
       console.log("PROFILE ERROR:", e.message);
     }
   };
- 
+
   // ─────────────────────────────
   // LEVEL UP ANIMATION
   // ─────────────────────────────
   const triggerLevelUpAnimation = () => {
     levelAnim.setValue(0);
- 
+
     Animated.spring(levelAnim, {
       toValue: 1,
       friction: 5,
       tension: 80,
       useNativeDriver: true
     }).start();
- 
+
     setTimeout(() => {
       if (isMounted.current) setShowLevelUp(false);
     }, 2000);
   };
- 
+
   // ─────────────────────────────
-  // AI TIPS
+  // AI TIPS (Agent 2)
   // ─────────────────────────────
   const loadAITips = async () => {
     try {
@@ -127,13 +134,13 @@ export default function MissionDetailScreen({ navigation, route }) {
       if (isMounted.current) setTipsLoading(false);
     }
   };
- 
+
   useEffect(() => {
     if (!userId) return;
     loadUserProfile();
     loadAITips();
   }, [userId, mission?.id]);
- 
+
   // ─────────────────────────────
   // STEP TOGGLE
   // ─────────────────────────────
@@ -145,100 +152,139 @@ export default function MissionDetailScreen({ navigation, route }) {
       )
     );
   };
- 
+
   // ─────────────────────────────
-  // FIX: Try Another Mission → Home
+  // CAMERA LAUNCH FUNCTION
+ const capturePhoto = async (type) => {
+  if (verifying) {
+    Alert.alert("Please wait", "AI verification is in progress.");
+    return;
+  }
+  
+  if (verifyResult?.verified) {
+    Alert.alert("Mission Verified", "This mission is already completed!");
+    return;
+  }
+
+  // 1. Mobile se Camera ki permission maangein
+  const permissionResult = await ImagePicker.requestCameraPermissionsAsync();
+
+  if (permissionResult.granted === false) {
+    Alert.alert("Permission Denied", "App ko chalane ke liye camera permission zaroori hai!");
+    return;
+  }
+
+  // 2. Camera Launch karein
+  const result = await ImagePicker.launchCameraAsync({
+    mediaTypes: ImagePicker.MediaTypeOptions.Images,
+    allowsEditing: false,
+    quality: 0.5,
+    base64: true, // 👈 Backend (Gemini) ke liye base64 true rakhna hai
+  });
+
+  // 3. Check karein agar user ne cancel nahi kiya
+  if (!result.canceled && result.assets && result.assets.length > 0) {
+    const base64Str = result.assets[0].base64;
+    
+    if (type === 'before') {
+      setBeforeImage(base64Str);
+      console.log('Before Image captured successfully via Expo!');
+    } else {
+      setAfterImage(base64Str);
+      console.log('After Image captured successfully via Expo!');
+    }
+  }
+};
+  // ─────────────────────────────
+  // RESET MISSION
   // ─────────────────────────────
   const resetMission = () => {
     setSteps(prev => prev.map(step => ({ ...step, done: false })));
     setVerifyResult(null);
+    setBeforeImage(null); // Clear images
+    setAfterImage(null);
     xpUpdated.current = false;
     setXpPopup(null);
     setShowLevelUp(false);
     navigation.navigate('Home');
   };
- 
+
   // ─────────────────────────────
-  // VERIFY + XP
+  // VERIFY + XP (Agent 3)
   // ─────────────────────────────
   const handleVerify = async () => {
- 
     if (!allDone || verifying) {
-      Alert.alert("Incomplete Mission", "Complete all steps first.");
+      Alert.alert("Incomplete Steps", "Please complete all standard steps first.");
       return;
     }
- 
+
+    if (!beforeImage || !afterImage) {
+      Alert.alert("Photos Missing", "Please take both 'Before' and 'After' eco-action photos for AI verification.");
+      return;
+    }
+
     setVerifying(true);
- 
+
     try {
- 
+      // Sent text steps along with captured base64 images to Gemini Multimodal Agent 3
       const result = await verifyMissionCompletion(
         mission.title,
-        steps
+        steps,
+        beforeImage,
+        afterImage
       );
- 
+
       if (!isMounted.current) return;
- 
+
       setVerifyResult(result);
- 
-      if (result?.xpBonus > 0 && !xpUpdated.current) {
- 
+
+      if (result?.verified && result?.xpBonus > 0 && !xpUpdated.current) {
         xpUpdated.current = true;
- 
         const updatedProfile = await addXP(userId, result.xpBonus);
- 
+
         if (updatedProfile && isMounted.current) {
- 
           const prevLevel = userProfile.level;
           setUserProfile(updatedProfile);
- 
+
           setXpPopup(result.xpBonus);
           setTimeout(() => {
             if (isMounted.current) setXpPopup(null);
           }, 2000);
- 
+
           if (updatedProfile.level > prevLevel) {
             setShowLevelUp(true);
             triggerLevelUpAnimation();
           }
- 
+
           navigation.setParams({
             xpUpdated: true,
             leaderboardRefresh: Date.now()
           });
         }
       }
- 
     } catch (e) {
       setVerifyResult({
         verified: false,
-        message: "Verification failed",
+        message: "AI agent verification failed due to network error.",
         xpBonus: 0
       });
- 
     } finally {
       if (isMounted.current) setVerifying(false);
     }
   };
- 
-  // ─────────────────────────────
-  // UI
-  // ─────────────────────────────
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor="#052e16" />
- 
+
       <ScrollView>
- 
         {/* XP POPUP */}
         {xpPopup && (
           <View style={styles.xpPopup}>
-            <Text style={styles.xpPopupText}>
-              +{xpPopup} XP 🎉
-            </Text>
+            <Text style={styles.xpPopupText}>+{xpPopup} XP 🎉</Text>
           </View>
         )}
- 
+
         {/* LEVEL UP ANIMATION */}
         {showLevelUp && (
           <Animated.View
@@ -257,39 +303,36 @@ export default function MissionDetailScreen({ navigation, route }) {
               }
             ]}
           >
-            <Text style={styles.levelPopupText}>
-              🏆 LEVEL UP!
-            </Text>
+            <Text style={styles.levelPopupText}>🏆 LEVEL UP!</Text>
           </Animated.View>
         )}
- 
+
         {/* HERO */}
         <View style={styles.hero}>
-          <Text style={styles.missionEmoji}>{mission.emoji}</Text>
-          <Text style={styles.title}>{mission.title}</Text>
-          <Text style={styles.desc}>{mission.desc}</Text>
+          <Text style={styles.missionEmoji}>{mission.emoji || "🌱"}</Text>
+          <Text style={styles.title}>{mission.title || "Eco Mission"}</Text>
+          <Text style={styles.desc}>{mission.desc || "Load description..."}</Text>
         </View>
- 
+
         {/* PROFILE */}
         <View style={styles.profileCard}>
           <Text style={styles.profileXP}>⚡ {userProfile.xp} XP</Text>
           <Text style={styles.profileBadge}>{userProfile.badge}</Text>
         </View>
- 
+
         {/* AI TIPS CARD */}
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>🤖 AI Eco Tip</Text>
+          <Text style={styles.cardTitle}>🤖 AI Eco Tip (Agent 2)</Text>
           {tipsLoading ? (
             <ActivityIndicator color="#4ade80" size="small" />
           ) : (
             <Text style={styles.tipText}>{aiTip || 'Follow eco-friendly practices for this mission.'}</Text>
           )}
         </View>
- 
+
         {/* STEPS */}
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>Mission Steps</Text>
- 
+          <Text style={styles.cardTitle}>Mission Checklists</Text>
           {steps.map(step => (
             <TouchableOpacity
               key={step.id}
@@ -302,223 +345,97 @@ export default function MissionDetailScreen({ navigation, route }) {
             </TouchableOpacity>
           ))}
         </View>
- 
+
+        {/* NEW CAPTURE PHOTO CARD */}
+        <View style={styles.card}>
+          <Text style={styles.cardTitle}>📸 Multimodal Proof (Agent 3 Verification)</Text>
+          <View style={styles.cameraContainer}>
+            <TouchableOpacity style={styles.cameraBox} onPress={() => capturePhoto('before')}>
+              <Text style={styles.camLabel}>Before Photo</Text>
+              {beforeImage ? (
+                <Image source={{ uri: `data:image/jpeg;base64,${beforeImage}` }} style={styles.preview} />
+              ) : (
+                <Text style={styles.plusIcon}>📷</Text>
+              )}
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.cameraBox} onPress={() => capturePhoto('after')}>
+              <Text style={styles.camLabel}>After Photo</Text>
+              {afterImage ? (
+                <Image source={{ uri: `data:image/jpeg;base64,${afterImage}` }} style={styles.preview} />
+              ) : (
+                <Text style={styles.plusIcon}>📷</Text>
+              )}
+            </TouchableOpacity>
+          </View>
+        </View>
+
         {/* VERIFY */}
         <TouchableOpacity
-          style={[styles.btn, !allDone && { opacity: 0.4 }]}
+          style={[styles.btn, (!allDone || !beforeImage || !afterImage) && { opacity: 0.4 }]}
           onPress={handleVerify}
-          disabled={!allDone || verifying}
+          disabled={!allDone || !beforeImage || !afterImage || verifying}
         >
           {verifying ? (
             <ActivityIndicator color="#052e16" />
           ) : (
-            <Text style={styles.btnText}>🚀 Submit Mission</Text>
+            <Text style={styles.btnText}>🚀 Submit to Agentic AI</Text>
           )}
         </TouchableOpacity>
- 
+
         {/* RESULT */}
         {verifyResult && (
           <View style={styles.result}>
             <Text style={styles.resultTitle}>
-              {verifyResult.verified ? "✅ Verified!" : "❌ Failed"}
+              {verifyResult.verified ? "✅ Verified by EcoGuardian Agent!" : "❌ Verification Failed"}
             </Text>
- 
-            <Text style={styles.resultMsg}>
-              {verifyResult.message}
-            </Text>
- 
+            <Text style={styles.resultMsg}>{verifyResult.message}</Text>
             {verifyResult.xpBonus > 0 && (
-              <Text style={styles.rewardText}>
-                +{verifyResult.xpBonus} XP Earned
-              </Text>
+              <Text style={styles.rewardText}>+{verifyResult.xpBonus} XP Earned</Text>
             )}
- 
-            {/* Try Another Mission → navigates to Home */}
             <TouchableOpacity style={styles.resetBtn} onPress={resetMission}>
               <Text style={styles.resetText}>🔄 Try Another Mission</Text>
             </TouchableOpacity>
           </View>
         )}
- 
+
         <View style={{ height: 50 }} />
       </ScrollView>
     </View>
   );
 }
- 
+
 // ─────────────────────────────
 // 🎨 STYLES
 // ─────────────────────────────
 const styles = StyleSheet.create({
- 
-  container: {
-    flex: 1,
-    backgroundColor: '#052e16'
-  },
- 
-  hero: {
-    padding: 24,
-    alignItems: 'center'
-  },
- 
-  missionEmoji: {
-    fontSize: 60,
-    marginBottom: 10
-  },
- 
-  title: {
-    fontSize: 26,
-    color: '#fff',
-    fontWeight: '800',
-    textAlign: 'center'
-  },
- 
-  desc: {
-    color: '#d1d5db',
-    marginTop: 10,
-    textAlign: 'center',
-    lineHeight: 22
-  },
- 
-  profileCard: {
-    marginHorizontal: 20,
-    backgroundColor: '#14532d',
-    borderRadius: 18,
-    padding: 18,
-    marginBottom: 16,
-  },
- 
-  profileXP: {
-    color: '#fff',
-    fontSize: 24,
-    fontWeight: '800'
-  },
- 
-  profileBadge: {
-    color: '#fcd34d',
-    marginTop: 4,
-    fontWeight: '700'
-  },
- 
-  card: {
-    marginHorizontal: 20,
-    marginBottom: 16,
-    padding: 18,
-    backgroundColor: '#14532d',
-    borderRadius: 18,
-  },
- 
-  cardTitle: {
-    color: '#fff',
-    marginBottom: 14,
-    fontWeight: '800',
-    fontSize: 16
-  },
- 
-  tipText: {
-    color: '#d1d5db',
-    lineHeight: 22
-  },
- 
-  step: {
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255,255,255,0.08)'
-  },
- 
-  btn: {
-    backgroundColor: '#4ade80',
-    marginHorizontal: 20,
-    marginTop: 10,
-    padding: 16,
-    borderRadius: 20,
-    alignItems: 'center'
-  },
- 
-  btnText: {
-    color: '#052e16',
-    fontWeight: '800',
-    fontSize: 16
-  },
- 
-  resetBtn: {
-    marginTop: 14,
-    padding: 14,
-    borderRadius: 18,
-    borderWidth: 1,
-    borderColor: '#4ade80',
-    alignItems: 'center'
-  },
- 
-  resetText: {
-    color: '#4ade80',
-    fontWeight: '700'
-  },
- 
-  result: {
-    marginHorizontal: 20,
-    backgroundColor: '#14532d',
-    borderRadius: 18,
-    padding: 20,
-    marginTop: 10,
-    borderWidth: 1,
-    borderColor: 'rgba(74,222,128,0.2)'
-  },
- 
-  resultTitle: {
-    color: '#fff',
-    fontSize: 18,
-    fontWeight: '800',
-    marginBottom: 8
-  },
- 
-  resultMsg: {
-    color: '#d1d5db',
-    lineHeight: 22
-  },
- 
-  rewardText: {
-    color: '#4ade80',
-    marginTop: 12,
-    fontWeight: '800',
-    fontSize: 16
-  },
- 
-  xpPopup: {
-    position: 'absolute',
-    top: 60,
-    alignSelf: 'center',
-    backgroundColor: '#4ade80',
-    paddingHorizontal: 24,
-    paddingVertical: 12,
-    borderRadius: 20,
-    zIndex: 999,
-    elevation: 10,
-  },
- 
-  xpPopupText: {
-    color: '#052e16',
-    fontSize: 18,
-    fontWeight: '900'
-  },
- 
-  levelPopup: {
-    position: 'absolute',
-    top: 120,
-    alignSelf: 'center',
-    backgroundColor: '#fcd34d',
-    paddingHorizontal: 24,
-    paddingVertical: 14,
-    borderRadius: 20,
-    zIndex: 999,
-    elevation: 10,
-  },
- 
-  levelPopupText: {
-    color: '#052e16',
-    fontSize: 18,
-    fontWeight: '900'
-  }
- 
+  container: { flex: 1, backgroundColor: '#052e16' },
+  hero: { padding: 24, alignItems: 'center' },
+  missionEmoji: { fontSize: 60, marginBottom: 10 },
+  title: { fontSize: 26, color: '#fff', fontWeight: '800', textAlign: 'center' },
+  desc: { color: '#d1d5db', marginTop: 10, textAlign: 'center', lineHeight: 22 },
+  profileCard: { marginHorizontal: 20, backgroundColor: '#14532d', borderRadius: 18, padding: 18, marginBottom: 16 },
+  profileXP: { color: '#fff', fontSize: 24, fontWeight: '800' },
+  profileBadge: { color: '#fcd34d', marginTop: 4, fontWeight: '700' },
+  card: { marginHorizontal: 20, marginBottom: 16, padding: 18, backgroundColor: '#14532d', borderRadius: 18 },
+  cardTitle: { color: '#fff', marginBottom: 14, fontWeight: '800', fontSize: 16 },
+  tipText: { color: '#d1d5db', lineHeight: 22 },
+  step: { paddingVertical: 12, borderBottomWidth: 1, borderBottomColor: 'rgba(255,255,255,0.08)' },
+  cameraContainer: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 },
+  cameraBox: { width: '48%', height: 120, backgroundColor: '#052e16', borderRadius: 12, justifyContent: 'center', alignItems: 'center', borderWidth: 1, borderColor: 'rgba(255,255,255,0.1)' },
+  camLabel: { color: '#4ade80', fontSize: 12, fontWeight: '600', position: 'absolute', top: 8 },
+  plusIcon: { fontSize: 24, marginTop: 15 },
+  preview: { width: '100%', height: '100%', borderRadius: 12 },
+  btn: { backgroundColor: '#4ade80', marginHorizontal: 20, marginTop: 10, padding: 16, borderRadius: 20, alignItems: 'center' },
+  btnText: { color: '#052e16', fontWeight: '800', fontSize: 16 },
+  resetBtn: { marginTop: 14, padding: 14, borderRadius: 18, borderWidth: 1, borderColor: '#4ade80', alignItems: 'center' },
+  resetText: { color: '#4ade80', fontWeight: '700' },
+  result: { marginHorizontal: 20, backgroundColor: '#14532d', borderRadius: 18, padding: 20, marginTop: 10, borderWidth: 1, borderColor: 'rgba(74,222,128,0.2)' },
+  resultTitle: { color: '#fff', fontSize: 18, fontWeight: '800', marginBottom: 8 },
+  resultMsg: { color: '#d1d5db', lineHeight: 22 },
+  rewardText: { color: '#4ade80', marginTop: 12, fontWeight: '800', fontSize: 16 },
+  xpPopup: { position: 'absolute', top: 60, alignSelf: 'center', backgroundColor: '#4ade80', paddingHorizontal: 24, paddingVertical: 12, borderRadius: 20, zIndex: 999, elevation: 10 },
+  xpPopupText: { color: '#052e16', fontSize: 18, fontWeight: '900' },
+  levelPopup: { position: 'absolute', top: 120, alignSelf: 'center', backgroundColor: '#fcd34d', paddingHorizontal: 24, paddingVertical: 14, borderRadius: 20, zIndex: 999, elevation: 10 },
+  levelPopupText: { color: '#052e16', fontSize: 18, fontWeight: '900' }
 });
- 

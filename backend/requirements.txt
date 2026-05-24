@@ -3,3 +3,8 @@ uvicorn
 langgraph
 langchain
 google-generativeai
+fastapi
+uvicorn
+google-genai
+pydantic
+pillow
