@@ -1,0 +1,22 @@
+// src/theme.js — Cute Kids Light Theme
+export const T = {
+  bg:       '#F0F7E6',
+  bg2:      '#E8F5D0',
+  card:     '#FFFFFF',
+  card2:    '#F7FBF0',
+  border:   '#C8E6A0',
+  accent:   '#5BAD3E',
+  accent2:  '#4A9A2E',
+  orange:   '#FF8C42',
+  blue:     '#4AABDB',
+  purple:   '#9B7FD4',
+  pink:     '#F06292',
+  text:     '#2D4A1E',
+  textSub:  '#4A7A32',
+  textMut:  '#8AAE72',
+  danger:   '#E53935',
+  warn:     '#F9A825',
+  success:  '#43A047',
+  white:    '#FFFFFF',
+  shadow:   'rgba(91,173,62,0.12)',
+};

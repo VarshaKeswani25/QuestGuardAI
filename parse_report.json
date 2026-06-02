@@ -1,0 +1,4514 @@
+[
+  {
+    "file": "src\\Screen\\QuestListScreen.jsx",
+    "line": 91,
+    "column": 10,
+    "message": "Expected corresponding JSX closing tag for <TouchableOpacity>. (91:10)"
+  },
+  {
+    "file": "src\\Screen\\ChildProfileScreen.jsx",
+    "line": 17,
+    "column": 6,
+    "message": "Identifier 'AVATAR_OPTIONS' has already been declared. (17:6)"
+  },
+  {
+    "file": "node_modules\\styleq\\styleq.flow.js",
+    "line": 10,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (10:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizeUtils\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedSectionList\\index.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\VirtualizedListProps.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\VirtualizedListContext.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\VirtualizedListCellRenderer.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\StateSafePureComponent.js",
+    "line": 23,
+    "column": 43,
+    "message": "Unexpected token, expected \"{\" (23:43)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\index.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\ChildListCollection.js",
+    "line": 13,
+    "column": 40,
+    "message": "Unexpected token, expected \"{\" (13:40)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\VirtualizedList\\CellRenderMask.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\ViewabilityHelper\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\vendor\\emitter\\EventEmitter.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Utilities\\useRefEffect.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Utilities\\useMergeRefs.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Utilities\\setAndForwardRef.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Utilities\\clamp.js",
+    "line": 13,
+    "column": 18,
+    "message": "Unexpected token, expected \",\" (13:18)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Types\\CoreEventTypes.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\TurboModule\\TurboModuleRegistry.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\TurboModule\\RCTExport.js",
+    "line": 30,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (30:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\StaticRenderer\\index.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\StaticContainer\\index.js",
+    "line": 31,
+    "column": 4,
+    "message": "Missing semicolon. (31:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\SectionList\\index.js",
+    "line": 17,
+    "column": 4,
+    "message": "Missing semicolon. (17:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\ReactNative\\ReactNativeFeatureFlags.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\PanResponder\\index.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\LayoutAnimation\\index.js",
+    "line": 18,
+    "column": 4,
+    "message": "Missing semicolon. (18:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\JSEventLoopWatchdog\\index.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\infoLog\\index.js",
+    "line": 16,
+    "column": 24,
+    "message": "Unexpected token, expected \")\" (16:24)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\FlatList\\index.js",
+    "line": 11,
+    "column": 20,
+    "message": "Unexpected token, expected \",\" (11:20)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\FillRateHelper\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\EventEmitter\\RCTDeviceEventEmitter.js",
+    "line": 11,
+    "column": 27,
+    "message": "Unexpected token, expected \",\" (11:27)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\EventEmitter\\NativeEventEmitter.js",
+    "line": 14,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (14:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\deepDiffer\\index.js",
+    "line": 17,
+    "column": 5,
+    "message": "Unexpected token, expected \",\" (17:5)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Batchinator\\index.js",
+    "line": 38,
+    "column": 11,
+    "message": "Unexpected token (38:11)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\useAnimatedProps.js",
+    "line": 27,
+    "column": 4,
+    "message": "Missing semicolon. (27:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\SpringConfig.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\NativeAnimatedTurboModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\NativeAnimatedModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\NativeAnimatedHelper.js",
+    "line": 15,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (15:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\Easing.js",
+    "line": 66,
+    "column": 16,
+    "message": "Unexpected token, expected \",\" (66:16)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\createAnimatedComponent.js",
+    "line": 17,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (17:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\bezier.js",
+    "line": 85,
+    "column": 5,
+    "message": "Unexpected token, expected \",\" (85:5)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\AnimatedPlatformConfig.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\AnimatedMock.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\AnimatedImplementation.js",
+    "line": 32,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (32:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\AnimatedEvent.js",
+    "line": 20,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (20:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\Animated.js",
+    "line": 12,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (12:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedWithChildren.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedValueXY.js",
+    "line": 18,
+    "column": 4,
+    "message": "Missing semicolon. (18:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedValue.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedTransform.js",
+    "line": 18,
+    "column": 13,
+    "message": "Unexpected token (18:13)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedTracking.js",
+    "line": 20,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (20:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedSubtraction.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedStyle.js",
+    "line": 22,
+    "column": 39,
+    "message": "Unexpected token, expected \",\" (22:39)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedProps.js",
+    "line": 21,
+    "column": 8,
+    "message": "Unexpected token (21:8)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedNode.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedMultiplication.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedModulo.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedInterpolation.js",
+    "line": 15,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (15:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedDivision.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedDiffClamp.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedColor.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\nodes\\AnimatedAddition.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\components\\AnimatedView.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\components\\AnimatedText.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\components\\AnimatedSectionList.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\components\\AnimatedScrollView.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\components\\AnimatedImage.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\components\\AnimatedFlatList.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\animations\\TimingAnimation.js",
+    "line": 22,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (22:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\animations\\SpringAnimation.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\animations\\DecayAnimation.js",
+    "line": 17,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (17:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\react-native\\Animated\\animations\\Animation.js",
+    "line": 14,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (14:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\vendor\\hash\\index.js",
+    "line": 58,
+    "column": 17,
+    "message": "Unexpected token, expected \",\" (58:17)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\types\\styles.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\types\\index.js",
+    "line": 10,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (10:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\warnOnce\\index.js",
+    "line": 10,
+    "column": 16,
+    "message": "Missing initializer in const declaration. (10:16)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useStable\\index.js",
+    "line": 17,
+    "column": 33,
+    "message": "Unexpected token, expected \"(\" (17:33)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useResponderEvents\\utils.js",
+    "line": 14,
+    "column": 30,
+    "message": "Unexpected token, expected \",\" (14:30)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useResponderEvents\\ResponderTouchHistoryStore.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useResponderEvents\\ResponderSystem.js",
+    "line": 134,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (134:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useResponderEvents\\ResponderEventTypes.js",
+    "line": 10,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (10:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useResponderEvents\\index.js",
+    "line": 20,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (20:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useResponderEvents\\createResponderEvent.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\usePressEvents\\PressResponder.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\usePressEvents\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\usePlatformMethods\\index.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useMergeRefs\\index.js",
+    "line": 14,
+    "column": 9,
+    "message": "Unexpected token, expected \")\" (14:9)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useLocale\\isLocaleRTL.js",
+    "line": 54,
+    "column": 34,
+    "message": "Unexpected token, expected \",\" (54:34)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useLocale\\index.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useLayoutEffect\\index.js",
+    "line": 16,
+    "column": 25,
+    "message": "Missing initializer in const declaration. (16:25)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useHover\\index.js",
+    "line": 18,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (18:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useEvent\\index.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\useElementLayout\\index.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\unitlessNumbers\\index.js",
+    "line": 67,
+    "column": 25,
+    "message": "Unexpected token, expected \",\" (67:25)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\UnimplementedView\\index.js",
+    "line": 9,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (9:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\TextInputState\\index.js",
+    "line": 22,
+    "column": 30,
+    "message": "Unexpected token, expected \",\" (22:30)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\requestIdleCallback\\index.js",
+    "line": 11,
+    "column": 41,
+    "message": "Unexpected token, expected \",\" (11:41)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\prefixStyles\\index.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\pick\\index.js",
+    "line": 10,
+    "column": 32,
+    "message": "Unexpected token, expected \",\" (10:32)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\normalizeColor\\index.js",
+    "line": 14,
+    "column": 8,
+    "message": "Unexpected token (14:8)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\multiplyStyleLengthValue\\index.js",
+    "line": 18,
+    "column": 39,
+    "message": "Unexpected token, expected \",\" (18:39)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\modality\\index.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\mergeRefs\\index.js",
+    "line": 13,
+    "column": 9,
+    "message": "Unexpected token, expected \")\" (13:9)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\isWebColor\\index.js",
+    "line": 10,
+    "column": 25,
+    "message": "Unexpected token, expected \",\" (10:25)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\isSelectionValid\\index.js",
+    "line": 10,
+    "column": 42,
+    "message": "Unexpected token, expected \"{\" (10:42)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\ImageLoader\\index.js",
+    "line": 13,
+    "column": 24,
+    "message": "Unexpected token (13:24)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\getBoundingClientRect\\index.js",
+    "line": 10,
+    "column": 35,
+    "message": "Unexpected token, expected \",\" (10:35)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\createDOMProps\\index.js",
+    "line": 22,
+    "column": 28,
+    "message": "Unexpected token, expected \",\" (22:28)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\canUseDom\\index.js",
+    "line": 10,
+    "column": 15,
+    "message": "Missing initializer in const declaration. (10:15)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\AssetRegistry\\index.js",
+    "line": 10,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (10:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\addEventListener\\index.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\AccessibilityUtil\\propsToAriaRole.js",
+    "line": 28,
+    "column": 1,
+    "message": "Unexpected token, expected \",\" (28:1)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\AccessibilityUtil\\propsToAccessibilityComponent.js",
+    "line": 37,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (37:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\modules\\AccessibilityUtil\\isDisabled.js",
+    "line": 10,
+    "column": 25,
+    "message": "Unexpected token, expected \",\" (10:25)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\YellowBox\\index.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\View\\types.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\View\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Vibration\\index.js",
+    "line": 11,
+    "column": 4,
+    "message": "Missing semicolon. (11:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\useWindowDimensions\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\useColorScheme\\index.js",
+    "line": 14,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (14:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\TouchableWithoutFeedback\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\TouchableOpacity\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\TouchableHighlight\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Touchable\\index.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Touchable\\ensurePositiveDelayProps.js",
+    "line": 12,
+    "column": 39,
+    "message": "Unexpected token, expected \",\" (12:39)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Touchable\\BoundingDimensions.js",
+    "line": 18,
+    "column": 33,
+    "message": "Unexpected token, expected \",\" (18:33)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\TextInput\\types.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\TextInput\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Text\\types.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Text\\TextAncestorContext.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Text\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Switch\\index.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\validate.js",
+    "line": 52,
+    "column": 28,
+    "message": "Unexpected token, expected \",\" (52:28)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\preprocess.js",
+    "line": 22,
+    "column": 42,
+    "message": "Unexpected token, expected \",\" (22:42)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\index.js",
+    "line": 18,
+    "column": 20,
+    "message": "Missing initializer in const declaration. (18:20)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\dom\\index.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\dom\\createOrderedCSSStyleSheet.js",
+    "line": 10,
+    "column": 4,
+    "message": "Missing semicolon. (10:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\dom\\createCSSStyleSheet.js",
+    "line": 13,
+    "column": 4,
+    "message": "Unexpected token, expected \",\" (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\unitlessNumbers.js",
+    "line": 67,
+    "column": 25,
+    "message": "Unexpected token, expected \",\" (67:25)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\resolveShadowValue.js",
+    "line": 15,
+    "column": 33,
+    "message": "Unexpected token, expected \",\" (15:33)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\normalizeValueWithProperty.js",
+    "line": 27,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (27:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\normalizeColor.js",
+    "line": 14,
+    "column": 8,
+    "message": "Unexpected token (14:8)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\index.js",
+    "line": 16,
+    "column": 4,
+    "message": "Missing semicolon. (16:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\hyphenateStyleName.js",
+    "line": 18,
+    "column": 32,
+    "message": "Unexpected token, expected \",\" (18:32)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\hash.js",
+    "line": 65,
+    "column": 17,
+    "message": "Unexpected token, expected \",\" (65:17)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StyleSheet\\compiler\\createReactDOMStyle.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\StatusBar\\index.js",
+    "line": 12,
+    "column": 20,
+    "message": "Unexpected token, expected \"{\" (12:20)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Share\\index.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\ScrollView\\ScrollViewBase.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\ScrollView\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\SafeAreaView\\index.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\RefreshControl\\index.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\ProgressBar\\index.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\processColor\\index.js",
+    "line": 13,
+    "column": 28,
+    "message": "Unexpected token (13:28)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Pressable\\index.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Platform\\index.js",
+    "line": 13,
+    "column": 14,
+    "message": "Unexpected token, expected \",\" (13:14)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\PixelRatio\\index.js",
+    "line": 20,
+    "column": 14,
+    "message": "Unexpected token, expected \"{\" (20:14)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Picker\\PickerItem.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Picker\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\PanResponder\\Alternative.js",
+    "line": 54,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (54:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Modal\\ModalPortal.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Modal\\ModalFocusTrap.js",
+    "line": 34,
+    "column": 29,
+    "message": "Unexpected token, expected \",\" (34:29)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Modal\\ModalContent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Modal\\ModalAnimation.js",
+    "line": 27,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (27:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Modal\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Linking\\index.js",
+    "line": 16,
+    "column": 4,
+    "message": "Missing semicolon. (16:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\KeyboardAvoidingView\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Keyboard\\index.js",
+    "line": 15,
+    "column": 13,
+    "message": "Unexpected token, expected \"{\" (15:13)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\InteractionManager\\TaskQueue.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\InteractionManager\\index.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\ImageBackground\\index.js",
+    "line": 10,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (10:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Image\\types.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Image\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\I18nManager\\index.js",
+    "line": 11,
+    "column": 4,
+    "message": "Missing semicolon. (11:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Dimensions\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Clipboard\\index.js",
+    "line": 16,
+    "column": 22,
+    "message": "Unexpected token, expected \"{\" (16:22)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\CheckBox\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Button\\index.js",
+    "line": 17,
+    "column": 4,
+    "message": "Missing semicolon. (17:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\BackHandler\\index.js",
+    "line": 15,
+    "column": 20,
+    "message": "Unexpected token, expected \"{\" (15:20)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\AppState\\index.js",
+    "line": 56,
+    "column": 30,
+    "message": "Unexpected token, expected \",\" (56:30)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\AppRegistry\\renderApplication.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\AppRegistry\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\AppRegistry\\AppContainer.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\Appearance\\index.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\ActivityIndicator\\index.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native-web\\src\\exports\\AccessibilityInfo\\index.js",
+    "line": 14,
+    "column": 32,
+    "message": "Unexpected token, expected \"{\" (14:32)"
+  },
+  {
+    "file": "node_modules\\react-native\\interface.js",
+    "line": 21,
+    "column": 7,
+    "message": "Missing semicolon. (21:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\index.js",
+    "line": 27,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (27:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\xhr\\events\\ProgressEvent.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\websockets\\events\\CloseEvent.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\webidl\\PlatformObjects.js",
+    "line": 20,
+    "column": 30,
+    "message": "Missing initializer in const declaration. (20:30)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\utils\\ArrayLikeUtils.js",
+    "line": 19,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (19:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\structuredClone\\structuredClone.js",
+    "line": 36,
+    "column": 12,
+    "message": "Missing initializer in const declaration. (36:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\UserTiming.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\ResourceTiming.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\ReactNativeStartupTiming.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\PerformanceObserver.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\PerformanceEntry.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\Performance.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\MemoryInfo.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\LongTasks.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\EventTiming.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\specs\\NativePerformance.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\performance\\internals\\RawPerformanceEntry.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\mutationobserver\\MutationRecord.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\mutationobserver\\MutationObserver.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\mutationobserver\\specs\\NativeMutationObserver.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\mutationobserver\\internals\\MutationObserverManager.js",
+    "line": 21,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (21:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\microtasks\\specs\\NativeMicrotasks.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\intersectionobserver\\IntersectionObserverEntry.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\intersectionobserver\\IntersectionObserver.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\intersectionobserver\\specs\\NativeIntersectionObserver.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\intersectionobserver\\internals\\IntersectionObserverManager.js",
+    "line": 21,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (21:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\idlecallbacks\\specs\\NativeIdleCallbacks.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\html\\events\\MessageEvent.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\geometry\\DOMRectReadOnly.js",
+    "line": 21,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (21:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\geometry\\DOMRectList.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\geometry\\DOMRect.js",
+    "line": 18,
+    "column": 30,
+    "message": "Unexpected token, expected \",\" (18:30)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\errors\\DOMException.js",
+    "line": 20,
+    "column": 34,
+    "message": "Missing initializer in const declaration. (20:34)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\oldstylecollections\\NodeList.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\oldstylecollections\\HTMLCollection.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\ReadOnlyText.js",
+    "line": 20,
+    "column": 16,
+    "message": "Unexpected token, expected \"{\" (20:16)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\ReadOnlyNode.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\ReadOnlyElement.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\ReadOnlyCharacterData.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\ReactNativeElement.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\ReactNativeDocument.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\specs\\NativeDOM.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\internals\\Traversal.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\internals\\ReactNativeDocumentInstanceHandle.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\internals\\ReactNativeDocumentElementInstanceHandle.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\nodes\\internals\\NodeInternals.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\events\\EventTarget.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\events\\EventHandlerAttributes.js",
+    "line": 43,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (43:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\events\\Event.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\events\\CustomEvent.js",
+    "line": 18,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (18:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\events\\internals\\EventTargetInternals.js",
+    "line": 17,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (17:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\webapis\\dom\\events\\internals\\EventInternals.js",
+    "line": 17,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (17:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\types\\HostInstance.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\types\\HostComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\styles\\composeStyles.js",
+    "line": 16,
+    "column": 37,
+    "message": "Unexpected token, expected \"(\" (16:37)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeWebSocketModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeVibration.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeUIManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeToastAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeTiming.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeStatusBarManagerIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeStatusBarManagerAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeSourceCode.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeSoundManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeShareModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeSettingsManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeSegmentFetcher.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeSampleTurboModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeRedBox.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativePushNotificationManagerIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativePlatformConstantsIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativePlatformConstantsAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativePermissionsAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeNetworkingIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeNetworkingAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeModalManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeLogBox.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeLinkingManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeKeyboardObserver.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeJSCHeapCapture.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeIntentAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeImageStoreIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeImageStoreAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeImageLoaderIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeImageLoaderAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeImageEditor.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeI18nManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeHeadlessJsTaskSupport.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeFrameRateLogger.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeFileReaderModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeExceptionsManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeDialogManagerAndroid.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeDevSettings.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeDevLoadingView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeDeviceInfo.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeDeviceEventManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeClipboard.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeBlobModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAppState.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAppearance.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAnimatedTurboModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAnimatedModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAlertManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeActionSheetManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAccessibilityManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\modules\\NativeAccessibilityInfo.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\UnimplementedNativeViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\SwitchNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\RCTSafeAreaViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\RCTModalHostViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\RCTInputAccessoryViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\PullToRefreshViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\ProgressBarAndroidNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\DebuggingOverlayNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\AndroidSwitchNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\AndroidSwipeRefreshLayoutNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\AndroidHorizontalScrollContentViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\AndroidDrawerLayoutNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\specs_DEPRECATED\\components\\ActivityIndicatorViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\setup\\setUpDefaultReactNativeEnvironment.js",
+    "line": 14,
+    "column": 22,
+    "message": "Unexpected token, expected \",\" (14:22)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\renderer\\errorhandling\\ErrorHandlers.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\featureflags\\ReactNativeFeatureFlagsBase.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\featureflags\\ReactNativeFeatureFlags.js",
+    "line": 23,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (23:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\featureflags\\specs\\NativeReactNativeFeatureFlags.js",
+    "line": 22,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (22:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\rndevtools\\setUpFuseboxReactDevToolsDispatcher.js",
+    "line": 11,
+    "column": 4,
+    "message": "Missing semicolon. (11:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\rndevtools\\ReactDevToolsSettingsManager.ios.js",
+    "line": 15,
+    "column": 46,
+    "message": "Unexpected token, expected \",\" (15:46)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\rndevtools\\ReactDevToolsSettingsManager.android.js",
+    "line": 13,
+    "column": 46,
+    "message": "Unexpected token, expected \",\" (13:46)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\rndevtools\\FuseboxSessionObserver.js",
+    "line": 12,
+    "column": 19,
+    "message": "Unexpected token (12:19)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\rndevtools\\specs\\NativeReactDevToolsSettingsManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\rndevtools\\specs\\NativeReactDevToolsRuntimeSettingsModule.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\DevMenu.js",
+    "line": 16,
+    "column": 4,
+    "message": "Missing semicolon. (16:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\specs\\NativeDevMenu.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\perfmonitor\\PerformanceOverlay.js",
+    "line": 22,
+    "column": 48,
+    "message": "Unexpected token, expected \"{\" (22:48)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\XHRInterceptor.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\StyleInspector.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\resolveBoxStyle.js",
+    "line": 27,
+    "column": 8,
+    "message": "Unexpected token, expected \",\" (27:8)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\ReactDevToolsOverlay.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\NetworkOverlay.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\InspectorPanel.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\InspectorOverlay.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\Inspector.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\getInspectorDataForViewAtPoint.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\ElementProperties.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\ElementBox.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\BoxInspector.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\devsupport\\devmenu\\elementinspector\\BorderBox.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\components\\virtualview\\VirtualViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\components\\virtualview\\VirtualView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\components\\scrollview\\VScrollViewNativeComponents.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\components\\scrollview\\HScrollViewNativeComponents.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\components\\safeareaview\\SafeAreaView_INTERNAL_DO_NOT_USE.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\animated\\NativeAnimatedValidation.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\animated\\NativeAnimatedHelper.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\animated\\createAnimatedPropsMemoHook.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\src\\private\\animated\\createAnimatedPropsHook.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\index.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Utilities\\infoLog.js",
+    "line": 16,
+    "column": 24,
+    "message": "Unexpected token, expected \")\" (16:24)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Utilities\\clamp.js",
+    "line": 13,
+    "column": 18,
+    "message": "Unexpected token, expected \",\" (13:18)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\VirtualizeUtils.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\VirtualizedSectionList.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\VirtualizedListProps.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\VirtualizedListContext.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\VirtualizedListCellRenderer.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\VirtualizedList.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\ViewabilityHelper.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\StateSafePureComponent.js",
+    "line": 23,
+    "column": 43,
+    "message": "Unexpected token, expected \"{\" (23:43)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\ListMetricsAggregator.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\FillRateHelper.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\ChildListCollection.js",
+    "line": 13,
+    "column": 40,
+    "message": "Unexpected token, expected \"{\" (13:40)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\virtualized-lists\\Lists\\CellRenderMask.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\node_modules\\@react-native\\js-polyfills\\error-guard.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\UTFSequence.js",
+    "line": 23,
+    "column": 17,
+    "message": "Missing initializer in const declaration. (23:17)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\promiseRejectionTrackingOptions.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\WebSocket\\WebSocketInterceptor.js",
+    "line": 48,
+    "column": 27,
+    "message": "Unexpected token, expected \",\" (48:27)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\WebSocket\\WebSocket.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Vibration\\Vibration.js",
+    "line": 21,
+    "column": 14,
+    "message": "Missing semicolon. (21:14)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\vendor\\emitter\\EventEmitter.js",
+    "line": 12,
+    "column": 4,
+    "message": "Missing semicolon. (12:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\vendor\\core\\ErrorUtils.js",
+    "line": 12,
+    "column": 4,
+    "message": "Missing semicolon. (12:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\warnOnce.js",
+    "line": 13,
+    "column": 16,
+    "message": "Missing initializer in const declaration. (13:16)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\useWindowDimensions.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\useRefEffect.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\useMergeRefs.js",
+    "line": 24,
+    "column": 36,
+    "message": "Unexpected token, expected \"(\" (24:36)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\useColorScheme.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\stringifyViewConfig.js",
+    "line": 11,
+    "column": 54,
+    "message": "Unexpected token, expected \",\" (11:54)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\stringifySafe.js",
+    "line": 17,
+    "column": 52,
+    "message": "Unexpected token, expected \",\" (17:52)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\SceneTracker.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\ReactNativeTestTools.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\RCTLog.js",
+    "line": 23,
+    "column": 18,
+    "message": "Missing semicolon. (23:18)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\PolyfillFunctions.js",
+    "line": 28,
+    "column": 38,
+    "message": "Unexpected token, expected \"(\" (28:38)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\PlatformTypes.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\Platform.ios.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\Platform.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\PixelRatio.js",
+    "line": 84,
+    "column": 14,
+    "message": "Unexpected token, expected \"{\" (84:14)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\PerformanceLoggerContext.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\NativeAppearance.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected token, expected \"{\" (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\mapWithSeparator.js",
+    "line": 13,
+    "column": 25,
+    "message": "Unexpected token, expected \"(\" (13:25)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\logError.js",
+    "line": 18,
+    "column": 34,
+    "message": "Unexpected token, expected \")\" (18:34)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\IPerformanceLogger.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\HMRClientProdShim.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\HMRClient.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\GlobalPerformanceLogger.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\FeatureDetection.js",
+    "line": 18,
+    "column": 34,
+    "message": "Unexpected token, expected \",\" (18:34)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\Dimensions.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\DevSettings.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\DevLoadingView.js",
+    "line": 39,
+    "column": 21,
+    "message": "Unexpected token, expected \",\" (39:21)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\DeviceInfo.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\defineLazyObjectProperty.js",
+    "line": 16,
+    "column": 33,
+    "message": "Unexpected token, expected \"(\" (16:33)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\deepFreezeAndThrowOnMutationInDev.js",
+    "line": 30,
+    "column": 42,
+    "message": "Unexpected token, expected \"(\" (30:42)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\createPerformanceLogger.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\codegenNativeComponent.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\codegenNativeCommands.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\binaryToBase64.js",
+    "line": 15,
+    "column": 28,
+    "message": "Unexpected token, expected \",\" (15:28)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\BackHandler.ios.js",
+    "line": 11,
+    "column": 4,
+    "message": "Missing semicolon. (11:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\BackHandler.android.js",
+    "line": 16,
+    "column": 4,
+    "message": "Missing semicolon. (16:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\Appearance.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\differ\\sizesDiffer.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\differ\\pointsDiffer.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\differ\\matricesDiffer.js",
+    "line": 22,
+    "column": 27,
+    "message": "Unexpected token, expected \",\" (22:27)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\differ\\insetsDiffer.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Utilities\\differ\\deepDiffer.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Types\\UIManagerJSInterface.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Types\\RootTagTypes.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Types\\ReactDevToolsTypes.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Types\\CoreEventTypes.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Types\\CodegenTypesNamespace.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Types\\CodegenTypes.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\TurboModule\\TurboModuleRegistry.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\TurboModule\\RCTExport.js",
+    "line": 32,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (32:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Text\\TextProps.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Text\\TextNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Text\\TextAncestorContext.js",
+    "line": 19,
+    "column": 25,
+    "message": "Missing initializer in const declaration. (19:25)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Text\\Text.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\StyleSheetTypes.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\StyleSheetExports.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\StyleSheet.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\splitLayoutProps.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\setNormalizedColorAlpha.js",
+    "line": 19,
+    "column": 38,
+    "message": "Unexpected token, expected \",\" (19:38)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\Rect.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processTransformOrigin.js",
+    "line": 19,
+    "column": 17,
+    "message": "Unexpected token, expected \",\" (19:17)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processTransform.js",
+    "line": 25,
+    "column": 11,
+    "message": "Unexpected token, expected \",\" (25:11)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processFontVariant.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processFilter.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processColorArray.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processColor.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processBoxShadow.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processBackgroundImage.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\processAspectRatio.js",
+    "line": 15,
+    "column": 39,
+    "message": "Unexpected token, expected \",\" (15:39)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\PointPropType.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\PlatformColorValueTypesIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\PlatformColorValueTypesIOS.ios.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\PlatformColorValueTypes.ios.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\PlatformColorValueTypes.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\normalizeColor.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\flattenStyle.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\EdgeInsetsPropType.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\private\\_TransformStyle.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\StyleSheet\\private\\_StyleSheetTypesOverrides.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Share\\Share.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Settings\\SettingsFallback.js",
+    "line": 14,
+    "column": 9,
+    "message": "Unexpected token, expected \",\" (14:9)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Settings\\Settings.js",
+    "line": 13,
+    "column": 12,
+    "message": "Missing semicolon. (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Settings\\Settings.ios.js",
+    "line": 15,
+    "column": 19,
+    "message": "Missing initializer in const declaration. (15:19)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Renderer\\shims\\ReactNativeViewConfigRegistry.js",
+    "line": 15,
+    "column": 13,
+    "message": "Unexpected token, expected \",\" (15:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Renderer\\shims\\ReactNativeTypes.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Renderer\\shims\\ReactNative.js",
+    "line": 14,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (14:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Renderer\\shims\\ReactFabric.js",
+    "line": 17,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (17:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Renderer\\shims\\createReactNativeComponentClass.js",
+    "line": 16,
+    "column": 13,
+    "message": "Unexpected token, expected \",\" (16:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactPrivate\\ReactNativePrivateInterface.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\UIManagerProperties.js",
+    "line": 29,
+    "column": 25,
+    "message": "Missing initializer in const declaration. (29:25)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\UIManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\RootTag.js",
+    "line": 14,
+    "column": 7,
+    "message": "Unexpected token, expected \"{\" (14:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\requireNativeComponent.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\RendererImplementation.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\renderApplication.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactNativeRuntimeDiagnostics.js",
+    "line": 17,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (17:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactNativeFeatureFlags.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\PaperUIManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\I18nManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\getNativeComponentAttributes.js",
+    "line": 30,
+    "column": 53,
+    "message": "Unexpected token, expected \",\" (30:53)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\getCachedComponentWithDebugName.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\FabricUIManager.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\DisplayMode.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected token, expected \"{\" (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\BridgelessUIManager.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\AppRegistryImpl.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\AppRegistry.flow.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\AppContainer.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\AppContainer-prod.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\AppContainer-dev.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricPublicInstance\\warnForStyleProps.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricPublicInstance\\ReactNativeAttributePayload.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricPublicInstance\\ReactFabricPublicInstanceUtils.js",
+    "line": 19,
+    "column": 46,
+    "message": "Unexpected token, expected \",\" (19:46)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricPublicInstance\\ReactFabricPublicInstance.js",
+    "line": 16,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (16:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ReactNative\\ReactFabricPublicInstance\\ReactFabricHostComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\PushNotificationIOS\\PushNotificationIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Pressability\\usePressability.js",
+    "line": 12,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (12:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Pressability\\PressabilityTypes.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Pressability\\PressabilityPerformanceEventEmitter.js",
+    "line": 11,
+    "column": 13,
+    "message": "Unexpected token, expected \",\" (11:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Pressability\\PressabilityDebug.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Pressability\\Pressability.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Pressability\\HoverState.js",
+    "line": 57,
+    "column": 32,
+    "message": "Unexpected token, expected \"{\" (57:32)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\PermissionsAndroid\\PermissionsAndroid.js",
+    "line": 17,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (17:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Performance\\Systrace.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Network\\XMLHttpRequest.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Network\\RCTNetworkingEventDefinitions.flow.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Network\\RCTNetworking.ios.js",
+    "line": 14,
+    "column": 13,
+    "message": "Unexpected token, expected \",\" (14:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Network\\RCTNetworking.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Network\\FormData.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Network\\convertRequestBody.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\ViewConfigIgnore.js",
+    "line": 13,
+    "column": 47,
+    "message": "Unexpected token (13:47)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\ViewConfig.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\StaticViewConfigValidator.js",
+    "line": 12,
+    "column": 13,
+    "message": "Unexpected token, expected \",\" (12:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\PlatformBaseViewConfig.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\NativeComponentRegistryUnstable.js",
+    "line": 11,
+    "column": 25,
+    "message": "Missing semicolon. (11:25)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\NativeComponentRegistry.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\BaseViewConfig.ios.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\NativeComponent\\BaseViewConfig.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Modal\\Modal.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\LogBoxNotificationContainer.js",
+    "line": 19,
+    "column": 4,
+    "message": "Missing semicolon. (19:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\LogBoxInspectorContainer.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\LogBox.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxStyle.js",
+    "line": 11,
+    "column": 42,
+    "message": "Unexpected token, expected \",\" (11:42)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxNotificationMessage.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxNotificationDismissButton.js",
+    "line": 18,
+    "column": 61,
+    "message": "Unexpected token, expected \",\" (18:61)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxNotificationCountBadge.js",
+    "line": 17,
+    "column": 58,
+    "message": "Unexpected token, expected \",\" (17:58)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxNotification.js",
+    "line": 23,
+    "column": 4,
+    "message": "Missing semicolon. (23:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxMessage.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorStackFrames.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorStackFrame.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorSourceMapStatus.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorSection.js",
+    "line": 17,
+    "column": 4,
+    "message": "Missing semicolon. (17:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorReactFrames.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorMessageHeader.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorHeaderButton.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorHeader.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorFooterButton.js",
+    "line": 19,
+    "column": 4,
+    "message": "Missing semicolon. (19:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorFooter.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorCodeFrame.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspectorBody.js",
+    "line": 30,
+    "column": 49,
+    "message": "Unexpected token, expected \",\" (30:49)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxInspector.js",
+    "line": 15,
+    "column": 24,
+    "message": "Unexpected token, expected \",\" (15:24)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\LogBoxButton.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\UI\\AnsiHighlight.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\Data\\parseLogBoxLog.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\Data\\LogBoxSymbolication.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\Data\\LogBoxLog.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LogBox\\Data\\LogBoxData.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\VirtualizeUtils.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\VirtualizedSectionList.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\VirtualizedListContext.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\VirtualizedList.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\ViewabilityHelper.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\SectionListModern.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\SectionList.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\FlatList.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Lists\\FillRateHelper.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Linking\\Linking.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\LayoutAnimation\\LayoutAnimation.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Interaction\\TouchHistoryMath.js",
+    "line": 31,
+    "column": 16,
+    "message": "Unexpected token, expected \",\" (31:16)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Interaction\\TaskQueue.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Interaction\\PanResponder.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Interaction\\InteractionManagerStub.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Interaction\\InteractionManager.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Interaction\\FrameRateLogger.js",
+    "line": 35,
+    "column": 37,
+    "message": "Unexpected token, expected \",\" (35:37)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\TextInlineImageNativeComponent.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\resolveAssetSource.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\RelativeImageStub.js",
+    "line": 28,
+    "column": 2,
+    "message": "Unexpected token, expected \",\" (28:2)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\nativeImageSource.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageUtils.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageTypes.flow.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageSourceUtils.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageSource.js",
+    "line": 17,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (17:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageResizeMode.js",
+    "line": 17,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (17:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageProps.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageInjection.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageBackground.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\ImageAnalyticsTagContext.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\Image.ios.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\Image.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\AssetUtils.js",
+    "line": 16,
+    "column": 32,
+    "message": "Unexpected token, expected \",\" (16:32)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Image\\AssetSourceResolver.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\EventEmitter\\RCTEventEmitter.js",
+    "line": 16,
+    "column": 23,
+    "message": "Unexpected token, expected \",\" (16:23)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\EventEmitter\\RCTDeviceEventEmitter.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\EventEmitter\\NativeEventEmitter.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Debugging\\useSubscribeToDebuggingOverlayRegistry.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Debugging\\DebuggingOverlayRegistry.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Debugging\\DebuggingOverlay.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpTimers.js",
+    "line": 66,
+    "column": 8,
+    "message": "Unexpected token, expected \",\" (66:8)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpSegmentFetcher.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpReactRefresh.js",
+    "line": 25,
+    "column": 29,
+    "message": "Unexpected token, expected \",\" (25:29)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpReactDevTools.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpErrorHandling.js",
+    "line": 23,
+    "column": 26,
+    "message": "Unexpected token, expected \",\" (23:26)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpDeveloperTools.js",
+    "line": 13,
+    "column": 7,
+    "message": "Missing semicolon. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\setUpAlert.js",
+    "line": 18,
+    "column": 31,
+    "message": "Unexpected token, expected \",\" (18:31)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\registerCallableModule.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\ReactNativeVersionCheck.js",
+    "line": 24,
+    "column": 31,
+    "message": "Unexpected token, expected \"{\" (24:31)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\ReactNativeVersion.js",
+    "line": 12,
+    "column": 20,
+    "message": "Missing initializer in const declaration. (12:20)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\ReactFiberErrorDialog.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\RawEventEmitter.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\ExtendedError.js",
+    "line": 11,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\ExceptionsManager.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Timers\\queueMicrotask.js",
+    "line": 22,
+    "column": 47,
+    "message": "Unexpected token, expected \",\" (22:47)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Timers\\JSTimers.js",
+    "line": 23,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (23:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Timers\\immediateShim.js",
+    "line": 17,
+    "column": 23,
+    "message": "Missing initializer in const declaration. (17:23)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\symbolicateStackTrace.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\parseHermesStack.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\parseErrorStack.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\openURLInBrowser.js",
+    "line": 15,
+    "column": 44,
+    "message": "Unexpected token, expected \",\" (15:44)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\openFileInEditor.js",
+    "line": 15,
+    "column": 45,
+    "message": "Unexpected token, expected \",\" (15:45)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\loadBundleFromServer.js",
+    "line": 16,
+    "column": 7,
+    "message": "Missing semicolon. (16:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Core\\Devtools\\getDevServer.js",
+    "line": 13,
+    "column": 23,
+    "message": "Missing semicolon. (13:23)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\StaticRenderer.js",
+    "line": 15,
+    "column": 4,
+    "message": "Missing semicolon. (15:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Button.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\View\\ViewPropTypes.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\View\\ViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\View\\ViewAccessibility.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\View\\View.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\View\\ReactNativeStyleAttributes.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\UnimplementedViews\\UnimplementedView.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableWithoutFeedback.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableOpacity.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableNativeFeedback.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableHighlight.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\TouchableBounce.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\Touchable.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\Position.js",
+    "line": 26,
+    "column": 22,
+    "message": "Unexpected token, expected \",\" (26:22)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\PooledClass.js",
+    "line": 23,
+    "column": 50,
+    "message": "Unexpected token, expected \",\" (23:50)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Touchable\\BoundingDimensions.js",
+    "line": 25,
+    "column": 33,
+    "message": "Unexpected token, expected \",\" (25:33)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ToastAndroid\\ToastAndroidFallback.js",
+    "line": 15,
+    "column": 11,
+    "message": "Unexpected token, expected \",\" (15:11)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ToastAndroid\\ToastAndroid.android.js",
+    "line": 38,
+    "column": 37,
+    "message": "Unexpected token, expected \",\" (38:37)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInputState.js",
+    "line": 15,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (15:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInputNativeCommands.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInput.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\TextInput.flow.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\RCTTextInputViewConfig.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\RCTSingelineTextInputNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\RCTMultilineTextInputNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\InputAccessoryView.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected token, expected \",\" (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\TextInput\\AndroidTextInputNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Switch\\Switch.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\StatusBar\\StatusBar.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Sound\\SoundManager.js",
+    "line": 14,
+    "column": 29,
+    "message": "Unexpected token, expected \"{\" (14:29)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewStickyHeader.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewNativeComponentType.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewContext.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollViewCommands.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\ScrollContentViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\processDecelerationRate.js",
+    "line": 14,
+    "column": 18,
+    "message": "Unexpected token, expected \",\" (14:18)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ScrollView\\AndroidHorizontalScrollViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\SafeAreaView\\SafeAreaView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\RefreshControl\\RefreshControl.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroidTypes.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroid.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ProgressBarAndroid\\ProgressBarAndroid.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Pressable\\useAndroidRippleForView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Pressable\\Pressable.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\LayoutConformance\\LayoutConformanceNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\LayoutConformance\\LayoutConformance.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Keyboard\\KeyboardAvoidingView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Keyboard\\Keyboard.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroidTypes.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroidFallback.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\DrawerAndroid\\DrawerLayoutAndroid.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\Clipboard\\Clipboard.js",
+    "line": 25,
+    "column": 13,
+    "message": "Unexpected token, expected \"{\" (25:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\ActivityIndicator\\ActivityIndicator.js",
+    "line": 12,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (12:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\AccessibilityInfo\\legacySendAccessibilityEvent.ios.js",
+    "line": 18,
+    "column": 10,
+    "message": "Unexpected token, expected \",\" (18:10)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\AccessibilityInfo\\legacySendAccessibilityEvent.android.js",
+    "line": 19,
+    "column": 10,
+    "message": "Unexpected token, expected \",\" (19:10)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Components\\AccessibilityInfo\\AccessibilityInfo.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\URLSearchParams.js",
+    "line": 14,
+    "column": 15,
+    "message": "Unexpected token (14:15)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\URL.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\FileReader.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\File.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\BlobTypes.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected token, expected \"{\" (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\BlobRegistry.js",
+    "line": 11,
+    "column": 14,
+    "message": "Missing initializer in const declaration. (11:14)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\BlobManager.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Blob\\Blob.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\BatchedBridge\\NativeModules.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\BatchedBridge\\MessageQueue.js",
+    "line": 21,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (21:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\BatchedBridge\\BatchedBridge.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\AppState\\AppState.js",
+    "line": 14,
+    "column": 13,
+    "message": "Unexpected token, expected \",\" (14:13)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\useAnimatedValue.js",
+    "line": 15,
+    "column": 14,
+    "message": "Unexpected token, expected \",\" (15:14)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\useAnimatedProps.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\SpringConfig.js",
+    "line": 13,
+    "column": 4,
+    "message": "Missing semicolon. (13:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\shouldUseTurboAnimatedModule.js",
+    "line": 14,
+    "column": 39,
+    "message": "Unexpected token, expected \"{\" (14:39)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\NativeAnimatedAllowlist.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\Easing.js",
+    "line": 15,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (15:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\createAnimatedComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\bezier.js",
+    "line": 30,
+    "column": 14,
+    "message": "Unexpected token, expected \",\" (30:14)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\AnimatedPlatformConfig.js",
+    "line": 13,
+    "column": 7,
+    "message": "This experimental syntax requires enabling one of the following parser plugin(s): \"flow\", \"typescript\". (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\AnimatedMock.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\AnimatedImplementation.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\AnimatedExports.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\AnimatedEvent.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\Animated.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedWithChildren.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedValueXY.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedValue.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedTransform.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedTracking.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedSubtraction.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedStyle.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedProps.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedObject.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedNode.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedMultiplication.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedModulo.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedInterpolation.js",
+    "line": 15,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (15:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedDivision.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedDiffClamp.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedColor.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\nodes\\AnimatedAddition.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\components\\AnimatedView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\components\\AnimatedText.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\components\\AnimatedSectionList.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\components\\AnimatedScrollView.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\components\\AnimatedImage.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\components\\AnimatedFlatList.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\animations\\TimingAnimation.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\animations\\SpringAnimation.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\animations\\DecayAnimation.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Animated\\animations\\Animation.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Alert\\RCTAlertManager.ios.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Alert\\RCTAlertManager.android.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\Alert\\Alert.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\Libraries\\ActionSheetIOS\\ActionSheetIOS.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\setup.js",
+    "line": 31,
+    "column": 12,
+    "message": "Unexpected token, expected \",\" (31:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\renderer.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\RefreshControlMock.js",
+    "line": 13,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (13:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\MockNativeMethods.js",
+    "line": 18,
+    "column": 1,
+    "message": "Missing semicolon. (18:1)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mockNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mockComponent.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mock.js",
+    "line": 19,
+    "column": 28,
+    "message": "Unexpected token, expected \"(\" (19:28)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\ViewNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\View.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\Vibration.js",
+    "line": 12,
+    "column": 21,
+    "message": "Unexpected token, expected \",\" (12:21)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\useColorScheme.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\UIManager.js",
+    "line": 14,
+    "column": 25,
+    "message": "Unexpected token, expected \",\" (14:25)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\TextInput.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\Text.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\ScrollView.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\requireNativeComponent.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\RendererProxy.js",
+    "line": 13,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (13:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\RefreshControl.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\NativeModules.js",
+    "line": 14,
+    "column": 29,
+    "message": "Unexpected token, expected \",\" (14:29)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\NativeComponentRegistry.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\Modal.js",
+    "line": 11,
+    "column": 12,
+    "message": "Unexpected token, expected \"from\" (11:12)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\Linking.js",
+    "line": 12,
+    "column": 21,
+    "message": "Unexpected token, expected \",\" (12:21)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\Image.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\Clipboard.js",
+    "line": 12,
+    "column": 37,
+    "message": "Unexpected token, expected \",\" (12:37)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\AppState.js",
+    "line": 14,
+    "column": 6,
+    "message": "Unexpected token, expected \",\" (14:6)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\ActivityIndicator.js",
+    "line": 11,
+    "column": 7,
+    "message": "Unexpected keyword 'typeof'. (11:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\jest\\mocks\\AccessibilityInfo.js",
+    "line": 14,
+    "column": 6,
+    "message": "Unexpected token, expected \",\" (14:6)"
+  },
+  {
+    "file": "node_modules\\react-native\\flow\\Stringish.js",
+    "line": 14,
+    "column": 7,
+    "message": "Missing semicolon. (14:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\flow\\HermesInternalType.js",
+    "line": 25,
+    "column": 7,
+    "message": "Missing semicolon. (25:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\flow\\global.js",
+    "line": 19,
+    "column": 7,
+    "message": "Missing semicolon. (19:7)"
+  },
+  {
+    "file": "node_modules\\react-native\\flow\\console.js",
+    "line": 11,
+    "column": 7,
+    "message": "Missing semicolon. (11:7)"
+  },
+  {
+    "file": "node_modules\\qrcode-terminal\\lib\\main.js",
+    "line": 3,
+    "column": 14,
+    "message": "The only valid numeric escape in strict mode is '\\0'. (3:14)"
+  },
+  {
+    "file": "node_modules\\protobufjs\\scripts\\postinstall.js",
+    "line": 9,
+    "column": 4,
+    "message": "'return' outside of function. (9:4)"
+  },
+  {
+    "file": "node_modules\\has-tostringtag\\test\\shams\\get-own-property-symbols.js",
+    "line": 12,
+    "column": 1,
+    "message": "'return' outside of function. (12:1)"
+  },
+  {
+    "file": "node_modules\\has-tostringtag\\test\\shams\\core-js.js",
+    "line": 12,
+    "column": 1,
+    "message": "'return' outside of function. (12:1)"
+  },
+  {
+    "file": "node_modules\\has-symbols\\test\\shams\\get-own-property-symbols.js",
+    "line": 12,
+    "column": 1,
+    "message": "'return' outside of function. (12:1)"
+  },
+  {
+    "file": "node_modules\\has-symbols\\test\\shams\\core-js.js",
+    "line": 12,
+    "column": 1,
+    "message": "'return' outside of function. (12:1)"
+  },
+  {
+    "file": "node_modules\\fbjs\\flow\\lib\\dev.js",
+    "line": 8,
+    "column": 7,
+    "message": "Missing semicolon. (8:7)"
+  },
+  {
+    "file": "node_modules\\@react-native\\js-polyfills\\error-guard.js",
+    "line": 14,
+    "column": 4,
+    "message": "Missing semicolon. (14:4)"
+  }
+]

@@ -1,0 +1,60 @@
+{
+  "missions": [
+    {
+      "title": "Turn Off Unused Lights",
+      "description": "The child will go around the house and turn off any extra lights, fans, or switches that are wasting electricity. This will help save energy and reduce the electricity bill.",
+      "civic_issue": "energy_saving",
+      "xp_reward": 50,
+      "difficulty": "Easy",
+      "estimated_minutes": 15,
+      "indoor": true,
+      "indoor_reason": "extreme heat 35.9°C"
+    },
+    {
+      "title": "Sort Household Waste",
+      "description": "The child will sort the household waste into recyclable and non-recyclable categories, helping to reduce waste and promote recycling. This task requires some effort and attention to detail.",
+      "civic_issue": "recycling",
+      "xp_reward": 75,
+      "difficulty": "Medium",
+      "estimated_minutes": 20,
+      "indoor": true,
+      "indoor_reason": "extreme heat 35.9°C"
+    },
+    {
+      "title": "Check for Leaks with Parent",
+      "description": "The child will help a parent check the home for dripping taps or water leaks, and help fix them to conserve water. This task requires parent involvement and some physical effort to inspect all the taps and pipes.",
+      "civic_issue": "water_conservation",
+      "xp_reward": 100,
+      "difficulty": "Hard",
+      "estimated_minutes": 25,
+      "indoor": true,
+      "indoor_reason": "extreme heat 35.9°C"
+    }
+  ],
+  "context_used": [
+    {
+      "text": "Indoor mode activated due to: extreme heat 35.9°C. All missions are home-based and safe for a 12-year-old.",
+      "page": "indoor",
+      "score": 1.0
+    }
+  ],
+  "location": "Gulshan-e-Iqbal",
+  "location_info": {
+    "found": true,
+    "display": "Gulshan-e-Iqbal",
+    "lat": "24.9067294",
+    "lon": "67.0986573",
+    "area_type": "administrative",
+    "description": "urban area of Karachi in Gulshan-e-Iqbal, Karachi"
+  },
+  "child_age": 12,
+  "weather": {
+    "condition": "haze",
+    "temp_c": 35.9,
+    "humidity": 46,
+    "is_raining": false,
+    "is_indoor": true,
+    "indoor_reason": "extreme heat 35.9°C"
+  },
+  "mode": "indoor"
+}
