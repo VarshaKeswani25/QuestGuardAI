@@ -1,0 +1,127 @@
+{
+  "missions": [
+    {
+      "title": "Pick Up Trash at Block 10 Park",
+      "description": "Help keep Block 10 Park clean by picking up any trash you see on the ground. Take a before and after photo in front of the park's playground to show the difference you made.",
+      "civic_issue": "waste",
+      "xp_reward": 50,
+      "difficulty": "Easy",
+      "estimated_minutes": 15,
+      "indoor": false,
+      "location_hint": "Block 10 Park"
+    },
+    {
+      "title": "Check for Clogged Drains near Dalmia Football Ground",
+      "description": "Walk around the area near Dalmia Football Ground and check if any of the storm drains are clogged with leaves or trash. Take a photo of any clogged drains and report them to help prevent flooding in the area.",
+      "civic_issue": "drainage",
+      "xp_reward": 75,
+      "difficulty": "Medium",
+      "estimated_minutes": 25,
+      "indoor": false,
+      "location_hint": "Dalmia Football Ground"
+    },
+    {
+      "title": "Plant a Tree at Aitchison Model School",
+      "description": "Help combat the heat island effect by planting a tree at Aitchison Model School. With the help of a teacher or school staff, plant a small tree and take a photo of your newly planted tree to track its growth and progress.",
+      "civic_issue": "greening",
+      "xp_reward": 100,
+      "difficulty": "Hard",
+      "estimated_minutes": 30,
+      "indoor": false,
+      "location_hint": "Aitchison Model School"
+    }
+  ],
+  "context_used": [
+    {
+      "text": "Najma Bibi (70-year-old female) outlined the continuous health-related issues of her grandchildren. “Diarrhea, skin infections, and flu become a constant part of our children’s lives, and we have no money for healthcare” “During hot summers, we spend our noon sitting under the Layari Express Overhead Bridge. This is our tree, our room, and playground of our kids!”Frequency of flooding has been increased since the last decade, although we have increased the heights of our rooms but still unable to escape from the deadly floods. We need help!”, said Um-e-Maria (a 40 Years old female resident of Auliya Town) while indicating the flood level on the wall of her one-bed room “We need a space to play – a playground and clean drinking water” “Can we get rid of mosquitoes? We can’t sleep at night.” Children (Age 3 – 11) of Hassan Auliya Town 4 feet",
+      "page": 103,
+      "score": 0.741
+    },
+    {
+      "text": "Enhancing Access to Cooling Given Pakiﬆan's high cooling demand and low penetration of cooling appliances, enhancing access to energy-eﬃcient cooling is critical. This includes promoting the use of energy-eﬃcient ceiling and pedeﬆal fans that meet the 5-Star NEECA Minimum Energy Performance Standards (MEPS). These fans oﬀer dual beneﬁts of reducing electricity consumption and lowering greenhouse gas emissions. This adaptation ﬆrategy will prioritize providing cooling solutions to Karachi's moﬆ vulnerable populations, particularly in heat-ﬆressed areas, as a ﬁrﬆ ﬆep. For informal settlements with limited access to electricity, Direct Current (DC) fans can provide a suﬆainable cooling solution for the moﬆ at-risk groups, including the elderly, children, and low-income communities, who have access to relief during extreme heat events. By promoting 5-ﬆar rated ceiling and pedeﬆal fans, these communities can reduce electricity use while mitigating heat-related health risks like heatﬆroke and dehydration. The ﬆrategy could include incentives such as subsidies or ﬁnancial support for households in vulnerable communities to purchase energy-eﬃcient fans or inﬆall solar-powered syﬆems. Additionally, local government partnerships with community organizations could help with the diﬆribution and inﬆallation of cooling devices. This focused approach improves health outcomes and enhances resilience by providing aﬀordable, suﬆainable cooling solutions in vulnerable areas. Public Drinking Water Facilities Access to clean drinking water is essential for reducing heat ﬆress, particularly in high-heat-risk areas where vulnerable communities face increased exposure to extreme temperatures. Additional drinking water facilities can be inﬆalled in public parks, particularly in the ﬁve towns moﬆ at risk: Malir, Gulberg, Gulshan-e-Iqbal, Lyari, and North Nazimabad. These facilities should also be provided in public and private primary and secondary schools to ensure that vulnerable children have access to clean drinking water during heatwaves.Expanding hydration facilities to community centers, markets, and bus ﬆops in high-density areas ensures residents, especially children, the elderly, outdoor workers, and low-income families, have access to water and can avoid heat-related illnesses. At conﬆruction sites, prioritizing ﬂexible work hours, hydration, and heat ﬆress awareness is essential to protect workers from extreme heat and ensure their safety and productivity. These measures can signiﬁcantly reduce the risk of health complications due to heat ﬆress and support overall community well-being.By improving water access, the ﬆrategy promotes health and well-being, enhances community resilience, and helps reduce the burden on healthcare syﬆems during extreme heat events. Improving Building Design Improving building design to reduce heat absorption is another critical adaptation ﬆrategy. Simple measures such as painting roofs white to reﬂect heat, adding shade over windows, and inﬆalling wall insulation and double-glazed glass can signiﬁcantly reduce indoor temperatures. As a priority, all government educational and health inﬆitutions in Karachi should be retroﬁtted with these features to reduce heat ﬆress for patients and children.For children in schools and healthcare settings, improving building design will be an eﬀective ﬆrategy to signiﬁcantly reduce the risk of heat-related illnesses, improve concentration, and enhance overall comfort. In classrooms, lower temperatures help children focus better, while in healthcare inﬆitutions, it ensures that young patients are less susceptible to heat ﬆress, which can complicate",
+      "page": 112,
+      "score": 0.702
+    },
+    {
+      "text": "Lyari River is one the longeﬆ river in Karachi city which passes through four out of six diﬆricts and four main induﬆrial eﬆates of Karachi. A sizeable population of low-income groups in Karachi city is living on the riverbank of the Lyari River. Some of these settlements are very old (before the partition) and some were settled due to the consequences of hiﬆoric migrations of Karachi. Hasan Auliya Town is known to be one of the oldeﬆ settlements in Karachi (more than 125 years). Moﬆ of the people residing there belong to the Baloch Community and many of them lived there for generations. They are low-income groups, living in congeﬆed un-plaﬆered RCC houses with multiple ﬆories. From 1970 onwards, a large number of male populations worked in the Middle Eaﬆ as laborers and workers; whereas in Karachi the male population was involved in labor work (conﬆruction sector, workshops, and factories) as drivers; and females as sweepers and maids. The prevailing socio-economic conditions have already made them a vulnerable population, and this vulnerability has been further exacerbated due to extreme climatic events, like heatwaves, ﬂooding, and drought/water ﬆress. In 2018, the new Lyari Expressway (16km highway) on both sides of the Lyari River relocated some of the settlements and left the areas as open space which took no time to become a huge dumpsite, leading to another health issue and nuisance and a source of methane production!A Case of Hasan Auliya TownThe Cry of Lyari People Source: Tariq, M., Faisal, F., Arif, M., Naz, R., & Amanat, M. (2019b). Exploring suﬆainable solution for waﬆewater treatment; a case ﬆudy of Lyari river (BS Thesis, NED University Karachi); https://newslinemagazine.com/magazine/highway-to-hell/",
+      "page": 102,
+      "score": 0.702
+    },
+    {
+      "text": "Karachi has long grappled with severe monsoon-related challenges, particularly over the laﬆ four decades, due to a compromised drainage syﬆem. This has resulted in frequent urban ﬂooding whenever there is suﬆained rainfall. The city, home to 58 ﬆormwater drains (locally known as nullahs), relies on these drains, which are connected to two non-perennial rivers—the Malir River and the Lyari River. These rivers traverse densely populated areas of Karachi before emptying into the Arabian Sea. However, widespread encroachment on nearly all natural drains and nullahs, combined with the dual use of ﬆorm drains as sewers, has led to severe blockages, exacerbating the city's vulnerability to ﬂooding during heavy downpours. The 1977 ﬂoods, with 267 deaths and extensive displacement, highlighted the impact of encroachments along the Malir River. Old city areas, commercial hubs, and low-lying regions face recurrent ﬂooding. Inadequate ﬆormwater drainage in inner-city localities like Gulshan-e-Iqbal, particularly along University Road, the Societies Union area on Shahrahe-Faisal, and Tipu Sultan Road, experiences severe ﬂooding. Similarly, Katachi Abadis in Mehmoodabad and Manzoor Colony, situated along the Malir River, are signiﬁcantly impacted by excessive ﬂooding and ﬆagnant water. Based on the assessment done in 2020 , the ﬂood vulnerability map indicates that a signiﬁcant portion of Diﬆrict South, along with sections of Diﬆrict Weﬆ, Korangi, and Eaﬆ, exhibits a very high vulnerability. These areas characterized by very high vulnerability typically experience dense population, low elevation, and frequent ﬂooding. Conversely, moﬆ parts of Diﬆrict Weﬆ and Malir display low or very low vulnerability, attributed to factors such as low population density, infrequent ﬂooding, and higher elevation. According to recent assessments, approximately 6.85% of Karachi's population is susceptible to ﬂooding, especially within a 250-meter buﬀer zone surrounding identiﬁed ﬂooding hotspots. The Climate Change Risk Assessment (CCRA) identiﬁes the South and Eaﬆ diﬆricts as the moﬆ vulnerable, with 28 and 23 hotspots, respectively. These diﬆricts alone account for nearly 50% of Karachi's 105 identiﬁed ﬂooding hotspots. The increasing frequency and intensity of extreme rainfall events in recent years indicate that urban ﬂooding risks will likely multiply in the future, necessitating signiﬁcant improvements in drainage infraﬆructure and adaptation measures.Urban FloodsKarachi Climate Action Plan K-CAP 80",
+      "page": 98,
+      "score": 0.695
+    },
+    {
+      "text": "Key Issues Encroachment and Infraﬆructure Misuse: The encroachment on natural watercourses and nullahs, coupled with the misuse of ﬆorm drains for sewage, has severely compromised Karachi's drainage capacity. Solid waﬆe is another area of concern that clogged drains and increased ﬂood risks. This has led to frequent blockages and subsequent ﬂooding during heavy rains. These issues disproportionately aﬀect vulnerable communities, particularly those in low-lying and informal settlements (especially women, children, and older age people). These areas often lack proper infraﬆructure, leaving them more susceptible to waterlogging, sanitation issues, and health risks from contamination. Prioritizing these communities for improved drainage syﬆems and solid waﬆe management is critical to reduce their exposure to ﬂood-related disaﬆers. Flood-Prone Areas: Flooding hotspots are concentrated in the South, Eaﬆ, and Korangi diﬆricts, with a signiﬁcant portion of the population living within high-risk zones. These areas are particularly vulnerable due to their proximity to blocked drainage syﬆems and compromised riverbeds. Moﬆ informal housing communities lack the resources to protect their homes and suﬀer greatly during ﬂooding events. They face not only property damage but also health risks, including the spread of waterborne diseases and respiratory issues.Ecosyﬆem Degradation: Urban development has encroached upon riverbeds and nullahs, obﬆructing natural water ﬂows and exacerbating the risk of urban ﬂooding. The degradation of these natural ﬂood management syﬆems has made Karachi more susceptible to ﬂooding during monsoon seasons. Vulnerable communities of Karachi living near these degraded areas face increased risks of property damage and displacement during heavy rains. These communities often lack access to resources for ﬂood preparedness or recovery, further compounding their vulnerability. Karachi Climate Action Plan K-CAP 81 Nizamani, J. A. (2020). Assessment of diﬀerent hazards and vulnerabilities with sparse data in coaﬆal city of Karachi, Pakiﬆan (Maﬆer's thesis, Middle Eaﬆ Technical University).",
+      "page": 99,
+      "score": 0.692
+    },
+    {
+      "text": "Karachi Climate Action Plan K-CAP 28During the consultation in Hasan Auliya Town, we engaged with residents, primarily from the Baloch community, who have lived in the area for generations (mainly, women, elderly people, and children). The discussions highlighted their vulnerability due to poor socio-economic conditions, exacerbated by extreme climate events like heatwaves, ﬂooding, and water ﬆress. Issues raised included inadequate housing, lack of access to basic services, and the environmental health risks posed by the Lyari River’s surrounding settlements, particularly after the conﬆruction of the Lyari Expressway in 2018, which led to increased pollution and waﬆe accumulation. The consultation emphasized the need for targeted climate adaptation ﬆrategies and improved waﬆe management to address the community’s pressing health and environmental concerns. During the consultations with children (aged 3–11) in low-income areas, key concerns included the lack of open and green spaces for play and reﬆ during hot summers and the need for clean drinking water. These discussions highlighted the suppressing demand for green cover in the city. In addition to this, a consultation was held with climate migrants from Mal Island, now living in Mal Mahala, a low-lying, low-income area. The participants, primarily women and elders, shared their experiences of displacement caused by rising sea levels and seawater intrusion, which disrupted traditional livelihoods such as ﬁshing, grazing, and cultivation. The migrants highlighted how adaptive measures like clay boundaries (Gaar) and moving to higher ground became inadequate over time. The collapse of the barter economy and declining freshwater availability forced their migration. They now face poor living conditions, lack of basic services, and limited economic opportunities in Mal Mahala.This consultation emphasizes the need to address the socio-economic vulnerabilities of displaced communities in climate action plans, focusing on targeted adaptation measures and improved resource access.These community consultations were complemented by visits to heatwave hotspots, and emergency service centers. Site visits to the WWF Wetland Center, mangrove areas, Kidney Park, and aﬀoreﬆation zones also helped gather data and develop ﬆrategies for addressing the region's climate challenges. All this information was added in the relevant sections of the report to ﬆrengthen the local context and input of all ﬆakeholders in identifying the issues and challenges and suggeﬆions to improve through sound actions and interventions.",
+      "page": 46,
+      "score": 0.69
+    },
+    {
+      "text": "Management of solid and eﬄuent waﬆe in Karachi presents several critical issues: High Waﬆe Generation: With 16,500 tons of solid waﬆe generated daily, the city's waﬆe management infraﬆructure is overwhelmed. A signiﬁcant portion of this waﬆe is organic, which, when left to decompose in landﬁlls, releases methane a potent greenhouse gas. Inadequate Sewage Treatment: Karachi discharges around 500 million gallons of sewage daily, translating to about 70% of the total water supplied in the city. Moﬆ of this sewage is untreated and ends up in natural water bodies, causing environmental pollution and health hazards. Limited Waﬆe Processing: The city lacks adequate facilities for compoﬆing, recycling, and landﬁll methane capture. This limitation hampers the city's ability to reduce GHG emissions from waﬆe management eﬀectively. Impact on Flood Risk: Poor solid waﬆe and sewage management exacerbate ﬂood risks in Karachi, as clogged drains and waterways impede the city's ability to handle heavy rainfall and ﬆormwater.Key Issues Karachi Climate Action Plan K-CAP 132",
+      "page": 150,
+      "score": 0.69
+    },
+    {
+      "text": "Associated Issues A hydraulic modeling exercise conducted by the World Bank using HEC-RAS evaluated two scenarios, a baseline scenario reﬂecting the current ﬆate of channel blockages and indentations caused by solid waﬆe. The improved scenario assumed that drains were clear of solid waﬆe and functioning smoothly as a natural response syﬆem. The results revealed a 30% reduction in ﬂood risk through proper waﬆe management (blockage-free drains) in Karachi City. Hence, the management of solid waﬆe will not only mitigate the eﬀects of GHG reductions but also predominantly increase the adaptive capacity of the city to manage intense rainfalls. Similarly, proper urban planning and enforcement as well as provision of aﬀordable housing could reduce the risk and vulnerability of the population situated in the high-risk areas. Lack of green cover and ill urban planning are leading to heat ﬆress in the city and urging for concrete actions at local level. The CCRA indicates a number of challenges that Karachi City is presently facing concerning climate change, but along with this it brings an opportunity for evidence-based climate action planning; setting up goals/targets/mileﬆones; identiﬁcation and prioritization of actions for adaptive and mitigative measures, and an updated governance & execution framework to implement a sound action plan to minimize the devaﬆating impacts of climate change on the infraﬆructure, human health and biodiversity of Karachi City. Karachi Climate Action Plan K-CAP 75",
+      "page": 93,
+      "score": 0.69
+    },
+    {
+      "text": "Climate Sensitivities of Rerhi Goth and Hundreds of other villages of Eastern Coast of Karachi Karachi’s population along the coaﬆal belt is bloomed signiﬁcantly over the laﬆ few decades. The coaﬆline along Rerhi Goath (~1050km) is severely exposed to climate change risks, such as coaﬆal erosion, sea-level rise, tidal ﬂooding, and saltwater intrusion. The villagers fall in low-income quantile, thus the poverty level, inadequate ameni- ties, limited access to basic services are some of the key factors that has increased their vulnerabilities to climate change. Access to safe drinking water is a continuous ﬆruggle for the resident of Rerhi Goth. The water tankers bring water for the local people to meet their need from a nearby dam which coﬆs these poor people at Rs. 3,200 - 3500 ($ 9 – 13 @278.12/$) per 5000 gallons. Unfortunately, this water is also not clean, leading to multiple infection diseases. News reported higher level of skin infections, gaﬆrointeﬆinal and kidney diseases. Improper solid waﬆe management and presence of a number of small-scale facto- ries (mainly textile and chemical ones) has further deteriorated ecological condi- tions in the area, and badly aﬀecting the environmental and human health of the Rerhi Goth villagers. Source: The Urban Unit KCAP Team Field Visit 2024 and Arab News. Auguﬆ 2, 2019. https://www.arabnews.com/node/1537811/%7B%7B Karachi Climate Action Plan K-CAP 90",
+      "page": 108,
+      "score": 0.688
+    },
+    {
+      "text": "healthcare settings, improving building design will be an eﬀective ﬆrategy to signiﬁcantly reduce the risk of heat-related illnesses, improve concentration, and enhance overall comfort. In classrooms, lower temperatures help children focus better, while in healthcare inﬆitutions, it ensures that young patients are less susceptible to heat ﬆress, which can complicate recovery or exacerbate exiﬆing conditions. Retroﬁtting all government educational and health inﬆitutions in Karachi with these features can provide a much-needed shield from the intense heat and support children's physical and cognitive development. Karachi Climate Action Plan K-CAP 94",
+      "page": 112,
+      "score": 0.685
+    }
+  ],
+  "location": "Gulshan-e-Iqbal",
+  "location_info": {
+    "found": true,
+    "display": "Gulshan-e-Iqbal",
+    "lat": "24.9067294",
+    "lon": "67.0986573",
+    "area_type": "administrative",
+    "description": "urban area of Karachi in Gulshan-e-Iqbal, Karachi"
+  },
+  "nearby_places": [
+    {
+      "name": "Dalmia Football Ground",
+      "type": "playground"
+    },
+    {
+      "name": "Aitchison Model School",
+      "type": "school"
+    },
+    {
+      "name": "National Housing Community Center",
+      "type": "community_centre"
+    },
+    {
+      "name": "Oak Academy",
+      "type": "school"
+    },
+    {
+      "name": "Block 10 Park",
+      "type": "park"
+    }
+  ],
+  "child_age": 12,
+  "weather": {
+    "condition": "haze",
+    "temp_c": 34.9,
+    "humidity": 43,
+    "is_raining": false,
+    "is_indoor": false,
+    "indoor_reason": ""
+  },
+  "mode": "outdoor"
+}

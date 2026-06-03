@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+langgraph
+langchain
+google-genai
+pydantic
+pillow
+python-dotenv

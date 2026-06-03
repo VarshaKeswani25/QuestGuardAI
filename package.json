@@ -1,0 +1,42 @@
+{
+  "name": "questguard",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "devDependencies": {
+    "@babel/parser": "^7.29.7",
+    "@react-native-community/cli": "latest",
+    "@types/react": "~19.1.10",
+    "typescript": "~5.9.2"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-navigation/native": "^7.2.4",
+    "@react-navigation/native-stack": "^7.15.1",
+    "dotenv": "^17.4.2",
+    "expo": "~54.0.33",
+    "expo-auth-session": "~5.5.2",
+    "expo-crypto": "~13.0.2",
+    "expo-image-picker": "~17.0.11",
+    "expo-location": "~16.5.5",
+    "expo-notifications": "~0.28.19",
+    "expo-status-bar": "~3.0.9",
+    "expo-web-browser": "~13.0.3",
+    "firebase": "^12.13.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-gesture-handler": "~2.28.0",
+    "react-native-reanimated": "~4.1.1",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-svg": "15.12.1",
+    "react-native-web": "^0.21.0"
+  },
+  "private": true
+}
