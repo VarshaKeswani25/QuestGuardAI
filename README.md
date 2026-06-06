@@ -4,7 +4,7 @@
 > A multi-agent AI platform that turns children's neighbourhoods into civic RPG adventures  powered by RAG, computer vision, and a parent-first safety layer.
 
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
@@ -16,7 +16,7 @@
 - [Team](#-team)
 - [License](#-license)
 
-## 🌍 Overview
+##  Overview
 
 **QuestGuard AI** gamifies civic engagement for children aged 6–16 in Karachi. Using the [Karachi Climate Action Plan (KCAP 2021)](https://www.iucn.org/) as its knowledge base, the system generates location-aware RPG missions  clearing blocked drains, planting saplings, removing illegal waste  and verifies real-world task completion through AI-powered photo analysis.
 
@@ -154,7 +154,7 @@ questguard-ai/
 8. REWARD / RETRY     Verified: XP + badge + leaderboard   Failed: feedback + retry
 
 
-## 🤖 AI Agents
+##  AI Agents
 
 ### 1. Planning Agent (`backend/agents/planning_agent.py`)
 Generates 3 age-appropriate civic RPG missions using a 4-stage pipeline:
@@ -239,7 +239,7 @@ cp ../.env.example .env
 npx expo start
 Scan the QR code with **Expo Go** on your phone (iOS or Android).
 
-## 👩‍💻 Team
+##  Team
 
 | Name | Reg. No. | Role | Key Contributions |
 |---|---|---|---|
@@ -251,7 +251,7 @@ Scan the QR code with **Expo Go** on your phone (iOS or Android).
 
 ---
 
-## 📄 License
+##  License
 
 This project was developed for academic purposes at **SZABIST University Karachi** under the course **CSC-4101 Artificial Intelligence, Spring 2026**.
 
